@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header Component */
+
+// header img
+.header_image {
+  background-size: cover;
+  background-image: url(headerimg.png);
+  // max-width: 100vw;
+  min-height: 100vh;
+}
+// navigation
+.nav_contents {
+  background-color: transparent;
+  .edw_logo {
+    padding-top: 40px;
+  }
+  .navElem {
+    float: right;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+
+    li {
+      margin-right: 30px;
+      display: inline-block;
+      list-style-type: none;
+      font-size: 20px;
+      font-weight: 400;
+      padding-top: 40px;
+      text-transform: uppercase;
+      // & img {
+      //   margin-right: 0px;
+      //
+      //   img {
+      //     border: 2px solid red;
+      //   }
+      // }
+      &:nth-last-child(2) {
+        //contact txt
+        margin-right: 60px;
+        background-color: #d5fa3b;
+        color: #1e1e1e;
+        // margin-top: 40px;
+        padding: 10px;
+      }
+      &:last-child {
+        margin-right: 0px;
+        img {
+          margin-top: 20px;
+        }
+      }
+      .globe_img {
+        border: 2px solid red;
+      }
+    }
+  }
+}
+//header txt
+// .header_title{
+//
+// }
+//
+// .header_descript{
+//
+// }
+
+/* Header Component End */
+
+/* Body Component */
+
+/* Body Component End */
+
+/* Footer Component */
+
+/* Footer Component End */
+
+/* Media Queries */
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+  .nav_contents {
+    .navElem {
+      float: left;
+      li {
+        margin-right: 20px;
+        font-size: 18px;
+        display: list-item;
+        padding: 22px 0 22px 0;
+      }
+    }
+  }
+}
+/* Mobile Styles End */
+
+/* Tablet Styles */
+@media only screen and (min-width: 480px) and (max-width: 840px) {
+  .nav_contents {
+    .navElem {
+      float: none;
+      text-align: center;
+      li {
+        margin-right: 60px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+/* Tablet Styles End */
+/* Media Queries End */
