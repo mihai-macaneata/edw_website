@@ -2,52 +2,71 @@
   <!-- Main Div Content -->
   <div>
     <div class="header_image">
-      <!-- Navigation -->
+      <!-- Header Navigation -->
       <nav class="nav_contents">
-        <img
-          class="edw_logo"
-          src="@/assets/edw_logo.svg"
-          alt="Eau de Web SRL Logo"
-        />
-        <div class="navElem">
-          <ul v-for="label in menu_labels" :key="label.aboutUs">
-            <li v-scroll-to="'#aboutUs'">{{ label.aboutUs }}</li>
-            <li v-scroll-to="'#clientWork'">
-              {{ label.clientWork }}
-            </li>
-            <li v-scroll-to="'#tech'">{{ label.tech }}</li>
-            <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
-            <li v-scroll-to="'#contact'">{{ label.contact }}</li>
-            <li>
+        <b-container>
+          <b-row>
+            <b-col col lg="4">
               <img
-                class="globe_img"
-                src="@/assets/globe.svg"
-                alt="Globe icon; Choose another language"
+                class="edw_logo"
+                src="@/assets/edw_logo.svg"
+                alt="Eau de Web SRL Logo"
               />
-            </li>
-          </ul>
-        </div>
+            </b-col>
+            <b-col col lg="8">
+              <div class="navElem">
+                <ul v-for="label in menu_labels" :key="label.aboutUs">
+                  <li v-scroll-to="'#about_us'">{{ label.aboutUs }}</li>
+                  <li v-scroll-to="'#client_work'">
+                    {{ label.clientWork }}
+                  </li>
+                  <li v-scroll-to="'#tech'">{{ label.tech }}</li>
+                  <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
+                  <li v-scroll-to="'#contact'">{{ label.contact }}</li>
+                  <li class="globe_img">
+                    img
+                  </li>
+                </ul>
+              </div>
+            </b-col>
+          </b-row>
+        </b-container>
       </nav>
-      <!-- Navigation End -->
+      <!-- Header Navigation End -->
 
-      <!-- Header Text -->
-      <div class="header_text">
-        <div v-for="text in header_text" :key="text.title">
-          <p v-html="text.title" style="color: white;"></p>
-          <p v-html="text.description"></p>
+      <!-- Header Content -->
+      <div class="header_content">
+        <!-- Header Text -->
+        <div class="header_text">
+          <div v-for="text in header_text" :key="text.title">
+            <p v-html="text.title" class="header_title"></p>
+            <p v-html="text.description" class="header_description"></p>
+          </div>
+          <!-- Header Btn -->
+          <div class="btn_center">
+            <div class="header_btn">
+              <div
+                v-for="(btn, btn_key) in header_btn"
+                :key="btn_key"
+                class="btn_text"
+              >
+                {{ btn }}
+              </div>
+              <div class="arrow_right">
+                <img
+                  class="globe_img"
+                  src="@/assets/arrow_right.svg"
+                  alt="Arrow pointing to the right"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Header Btn End -->
         </div>
+        <!-- Header Text End -->
       </div>
+      <!-- Header Content End-->
     </div>
-
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
-    <div>some text text</div>
   </div>
   <!-- Main Div Content End -->
 </template>

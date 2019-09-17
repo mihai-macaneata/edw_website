@@ -13,69 +13,207 @@ body {
 .header_image {
   background-size: cover;
   background-image: url(headerimg.png);
-  // max-width: 100vw;
   min-height: 100vh;
 }
 // navigation
 .nav_contents {
   background-color: transparent;
-  .edw_logo {
-    padding-top: 40px;
-  }
+  padding-top: 40px;
   .navElem {
     float: right;
     color: #fff;
     cursor: pointer;
-    display: inline;
-
-    li {
-      margin-right: 30px;
-      display: inline-block;
-      list-style-type: none;
-      font-size: 20px;
-      font-weight: 400;
-      padding-top: 40px;
-      text-transform: uppercase;
-      // & img {
-      //   margin-right: 0px;
-      //
-      //   img {
-      //     border: 2px solid red;
-      //   }
-      // }
-      &:nth-last-child(2) {
-        //contact txt
-        margin-right: 60px;
-        background-color: #d5fa3b;
-        color: #1e1e1e;
-        // margin-top: 40px;
-        padding: 10px;
-      }
-      &:last-child {
-        margin-right: 0px;
-        img {
-          margin-top: 20px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      li {
+        margin-right: 30px;
+        list-style-type: none;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:nth-last-child(2) {
+          //contact txt
+          margin-right: 40px;
+          background-color: #d5fa3b;
+          color: #1e1e1e;
+          padding: 5px 8px;
         }
-      }
-      .globe_img {
-        border: 2px solid red;
+        &:last-child {
+          margin-right: 0px;
+          background: url(globe.svg) no-repeat;
+          background-size: 31px;
+          color: transparent;
+        }
       }
     }
   }
 }
-//header txt
-// .header_title{
-//
-// }
-//
-// .header_descript{
-//
-// }
+// header txt
+.header_content {
+  .header_text {
+    color: #fff;
+    display: flex;
+    justify-content: center; //horizontal align
+    align-items: center; //vertical align
+    flex-direction: column;
+    min-height: 80%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
 
+    .header_title {
+      font-size: 90px;
+      font-weight: 700;
+      margin-bottom: -20px;
+    }
+
+    .header_description {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  //header btn
+  .btn_center {
+    display: flex;
+    justify-content: center; //horizontal align
+    align-items: center; //vertical align
+    flex-direction: column;
+    top: 85%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    .header_btn {
+      display: inline-flex;
+      background-color: #7db621;
+      border: none;
+      padding: 20px 35px;
+      border-radius: 35px;
+      cursor: pointer;
+
+      .btn_text {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #fff;
+      }
+      .arrow_right {
+        margin-left: 15px;
+        margin-top: 2px;
+      }
+    }
+  }
+}
 /* Header Component End */
 
 /* Body Component */
+.content_lineUnder {
+  border-color: #d5fa3b;
+  border-width: 2px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+// About EDW
 
+.about_us {
+  background-color: #1e1e1e;
+  ::after {
+    content: "";
+    background-color: #1e1e1e;
+    // bottom: 0;
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(5deg);
+    // transform-origin: 0%;
+    z-index: -1;
+  }
+  .aboutus_container {
+    padding-top: 100px;
+    .title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 35px;
+      display: flex;
+      justify-content: center; //horizontal align
+      align-items: center; //vertical align
+      padding-bottom: -5px;
+    }
+    .aboutus_row {
+      padding-top: 50px;
+      .slogan {
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+        .title_edw {
+          display: inline;
+          color: #7db621;
+        }
+      }
+      //Name logo,title and description
+      .name_row {
+        padding-top: 40px;
+      }
+      .nameCard_title,
+      .manifestoCard_title {
+        color: #7db621;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      .nameCard_descript,
+      .manifestoCard_descript {
+        color: #fff;
+        font-size: 18px;
+        margin-top: -15px;
+      }
+      .name_logo,
+      .manifesto_logo {
+        padding-top: 8px;
+        margin-left: -10px;
+      }
+      .aboutus_img img {
+        width: 100%;
+      }
+    }
+    .aboutusbtn_style {
+      padding-top: 50px;
+    }
+    .aboutus_btn {
+      display: flex;
+      justify-content: center; //horizontal align
+      align-items: center; //vertical align
+      cursor: pointer;
+      // margin-bottom: 100px;
+
+      .contactus_btn {
+        border: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #fff;
+        background-color: #7db621;
+        padding: 15px 45px;
+        border-radius: 35px;
+      }
+      .jobs_btn {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #7db621;
+        border: 1px solid;
+        border-radius: 35px;
+        padding: 15px 35px;
+        background-color: transparent;
+        margin-left: 50px;
+      }
+    }
+  }
+}
 /* Body Component End */
 
 /* Footer Component */
