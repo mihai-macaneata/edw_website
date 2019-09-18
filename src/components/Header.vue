@@ -20,9 +20,9 @@
                   <li v-scroll-to="'#client_work'">
                     {{ label.clientWork }}
                   </li>
-                  <li v-scroll-to="'#tech'">{{ label.tech }}</li>
+                  <li v-scroll-to="'#tech_used'">{{ label.tech }}</li>
                   <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
-                  <li v-scroll-to="'#contact'">{{ label.contact }}</li>
+                  <li v-scroll-to="'#contact_us'">{{ label.contact }}</li>
                   <li class="globe_img">
                     img
                   </li>
@@ -44,7 +44,7 @@
           </div>
           <!-- Header Btn -->
           <div class="btn_center">
-            <div class="header_btn">
+            <div class="header_btn" v-scroll-to="'#about_us'">
               <div
                 v-for="(btn, btn_key) in header_btn"
                 :key="btn_key"

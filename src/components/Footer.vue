@@ -109,9 +109,7 @@
 <script>
 export default {
   props: {
-    footer_one: Array,
-    footer_two: Array,
-    footer_three: Array
+    footer: Array
   }
 };
 </script>

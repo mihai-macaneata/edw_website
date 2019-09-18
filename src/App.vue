@@ -5,8 +5,14 @@
       :header_text="data.header_text"
       :header_btn="data.header_btn"
     />
-    <Body :about_us="data.about_us" :client_work="data.client_work"/>
-    <Footer />
+    <Body
+      :about_us="data.about_us"
+      :client_work="data.client_work"
+      :tech_used="data.tech_used"
+      :jobs="data.jobs"
+      :contact_us="data.contact_us"
+    />
+    <Footer :footer="data.footer"/>
   </div>
 </template>
 

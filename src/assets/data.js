@@ -28,8 +28,8 @@ export default {
       manifestoCard_title: "Manifesto",
       manifestoCard_descript: `The drives of our activities are the <strong>open source culture</strong> and the use of open standards due to the benefits of code reuse,
         openness in participating in projects worldwide, peer review and contributions from a wide community of developers.`,
-      contactus_btn: "Contact Us",
-      jobs_btn: "Open job positions"
+      contactus_btn: `Contact Us`,
+      jobs_btn: `Open job positions`
     }
   ],
   client_work: [
@@ -39,8 +39,8 @@ export default {
     {
       workone_title: "The European Commission",
       workone_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
-       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="workone_linkone">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
-       <a href="#" class="workone_linktwo">RDF data cubes</a>.`,
+       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
+       <a href="#" class="edw_links">RDF data cubes</a>.`,
       workone_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
     },
     {
@@ -49,7 +49,97 @@ export default {
       achieve significant and measurable improvement in Europe's environment through the provision of timely, targeted, relevant and reliable info.
       Since 2010 we are in charge of the framework contracts for Zope/Plone web development, including EEA’s main website,
       the European Environment Information and Observation Network and the European Nature Information System.`,
-      worktwo_btn: `<a href="http://www.eea.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
+      worktwo_btn: `<a href="http://www.eea.europa.eu/" target="_blank" class="worktwo_btn">Visit website</a>`
+    }
+  ],
+  tech_used: [
+    {
+      title: "Technologies Used"
+    },
+    {
+      w3c: `Our products and services respect modern standards for accessibility, syndication and Web services.
+      <br/><br/><strong>Most of our work is open source and that’s the way we like it.</strong>`,
+      events: `We attend <strong>trainings and conferences</strong> all the time and we keep ourselves informed
+      about new technologies, solutions and standards. <br/><br/>This allows us to use <strong>emerging technology</strong>
+      when developing applications and also suggest the suitable solutions to our clients when we start new ones.`,
+      semantic_web: `Web applications’ interoperability is a big component of our work,
+      so we’ve been increasingly involved into the Semantic Web principles and tools,
+      working with <a href="http://ec.europa.eu/environment/seis/" class="edw_links">SEIS</a> and
+      <a href="http://en.wikipedia.org/wiki/Open_data" class="edw_links">Open Data</a> guidelines and implementations.`
+    },
+    {
+      text_one: `Over time we learned to <em>work profesionally</em>.
+      All code is under version control
+      (<a href="http://taskman.eionet.europa.eu/projects/naaya/repository/show/trunk/eggs" class="edw_links">Eionet’s svn repository</a>,
+       <a href="https://github.com/eaudeweb" class="edw_links">our github account</a>),
+      we write <em>unit tests</em>, any important change goes through <em>peer code review</em>,
+      and we <em>pair program</em> when it makes sense. Deployment to staging and production is <em>automated</em>,
+      and we have specialized people for testing and system administration.
+      <br/><br/>We also have close, long-term relationships with our <a href="#client_work" class="edw_links">clients</a>,
+      and we work in small iterations with quick feedback. `
+    },
+    {
+      plone_title: "Plone Advocacy",
+      plone_text: `Eau de Web continues to demonstrate a long-term commitment to share
+      and contribute the knowledge, software and resources to benefit others through <strong>Plone’s open source community</strong>.
+      <br/><br/>Some of our efforts to evolve and promote Plone include: `,
+      plone_linkone: `<a href="http://plone.org/foundation/members" target="_blank" class="edw_links">Plone Foundation member</a>`,
+      plone_linktwo: `<a href="https://github.com/plone" target="_blank" class="edw_links">Plone Core contributors</a>`,
+      plone_linkthree: `<a href="https://github.com/collective" target="_blank" class="edw_links">Plone Collective contributors</a>`,
+      plone_linkfour: `<a href="http://ploneconf.org/" target="_blank" class="edw_links">Plone Conference and Sprints attendees</a>`,
+      plone_linkfive: `<a href="http://plone.ro/" target="_blank" class="edw_links">Plone User’s Group Romania founder and coordinator</a>`
+    }
+  ],
+  jobs: [
+    {
+      title: "Jobs"
+    },
+    {
+      job_titleone: "Frontend Developer",
+      job_descriptionone: `We are looking for a Frontend Developer,
+  with experience in JavaScript, able to work with, and/or learn, React, Angular, Meteor or similar frameworks.`,
+      job_btnone: `<a href="#" class="jobs_btn">View job</a>`
+    },
+    {
+      job_titletwo: "Senior Python web developer",
+      job_descriptiontwo: `We are looking for a senior web developer with broad experience, from databases to in-browser apps.`,
+      job_btntwo: `<a href="#" class="jobs_btn">View job</a>`
+    },
+    {
+      job_titlethree: "Senior Drupal developer",
+      job_descriptionthree: `We are looking for a senior PHP web developer experienced in Drupal 7
+  for at least one year or two completed projects.`,
+      job_btnthree: `<a href="#" class="jobs_btn">View job</a>`
+    }
+  ],
+  contact_us: [
+    {
+      title: "Contact Us"
+    },
+    {
+      contact_text: `Our <em>office</em> is located near Arcul de Triumf, in a quiet neighborhood and some of us even bike to work.
+      <br/><br/> We use any excuse to organize a social evening with poker and board games.
+      The company pays for gym membership and the odd wine party. We go to conferences and regularly order technical books.`
+    },
+    {
+      address_title: "Address",
+      address_description: `Str. Maior Gheorghe Șonțu, No. 8, et. 1, 011448, Bucharest, Romania`,
+      phone_title: "Phone/Fax",
+      phone_description: `+40 21 222 1522`,
+      email_title: "Email us",
+      email_description: `office@eaudeweb.ro`
+    }
+  ],
+  footer: [
+    {
+      socialmedia_title: "Follow us on our social media"
+    },
+    {
+      linksone_footer: `<a href="#about_us">About us</a> / <a href="#client_work">Client work</a> /
+      <a href="#tech_used>Tehnologies</a> / <a href="#jobs">Jobs</a> / <a href="#contact_us">Contact Us</a>`,
+      linkstwo_footer: `<a href="#">GDPR</a> / <a href="#">Environmental Policy</a> /
+      <a href="#">Terms of Use</a> / <a href="#">About EDW</a>`,
+      text_footer: "Copyright © 2019 Eau de Web. All rights reserved."
     }
   ]
 };
