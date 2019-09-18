@@ -345,26 +345,89 @@
     </div>
     <!-- Jobs End -->
 
-        <!-- Contact -->
+    <!-- Contact -->
     <div class="contact_us">
-
-    <b-container>
-      <b-row>
-<b-col class="contactus_col" id="contact_us">
-  <div v-for="(text, text_key) in contact_us" :key="text_key">
-    <p
-      v-html="text.title"
-      class="contactus_title
+      <b-container>
+        <b-row>
+          <b-col class="contactus_col" id="contact_us">
+            <div v-for="(text, text_key) in contact_us" :key="text_key">
+              <p
+                v-html="text.title"
+                class="contactus_title
 "
-    ></p>
-  </div>
-  <hr class="content_lineUnderfive" />
-</b-col>
-      </b-row>
+              ></p>
+            </div>
+            <hr class="content_lineUnderfive" />
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <div v-for="(text, text_key) in contact_us" :key="text_key">
+              <p
+                v-html="text.contact_text"
+                class="contactus_text
+"
+              ></p>
+            </div>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <b-container>
+              <b-row class="contactus_row">
+                <!-- Address -->
+                <b-col>
+                  <div v-for="(text, text_key) in contact_us" :key="text_key">
+                    <p
+                      v-html="text.address_title"
+                      class="contactus_addresstitle
+"
+                    ></p>
+                    <p
+                      v-html="text.address_description"
+                      class="contactus_addressdescript
+"
+                    ></p>
+                  </div>
+                  <!-- Phone/Fax -->
+                  <div v-for="(text, text_key) in contact_us" :key="text_key">
+                    <p
+                      v-html="text.email_title"
+                      class="contactus_emailtitle
+"
+                    ></p>
+                    <p
+                      v-html="text.email_description"
+                      class="contactus_emaildescript
+"
+                    ></p>
+                  </div>
+                </b-col>
+                <!-- Phone/Fax -->
+                <b-col>
+                  <div v-for="(text, text_key) in contact_us" :key="text_key">
+                    <p
+                      v-html="text.phone_title"
+                      class="contactus_phonetitle
+"
+                    ></p>
+                    <p
+                      v-html="text.phone_description"
+                      class="contactus_phonedescript
+"
+                    ></p>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </b-col>
+          <b-col>
+            <!-- google map -->
+          </b-col>
+        </b-row>
       </b-container>
     </div>
     <!-- Contact End -->
-
   </div>
   <!-- Main Div Content End -->
 </template>

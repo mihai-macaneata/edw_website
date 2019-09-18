@@ -534,6 +534,23 @@ body {
     margin-right: auto;
     margin-top: -35px;
   }
+  .contactus_text {
+    color: #1e1e1e;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .contactus_row {
+    margin-left: -30px;
+    .contactus_addresstitle,
+    .contactus_phonetitle,
+    .contactus_emailtitle {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e1e1e;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 /* Body Component End */
