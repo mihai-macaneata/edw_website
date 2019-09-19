@@ -7,17 +7,24 @@
         <!-- About Eau de Web Title -->
         <b-row>
           <b-col id="about_us">
-            <div v-for="text in about_us" :key="text.title">
-              <p v-html="text.title" class="aboutus_title"></p>
+            <div
+              v-for="(aboutUsTitle, aboutUsTitle_key) in aboutus_title"
+              :key="aboutUsTitle_key"
+            >
+              <div>
+                <p class="content_title">{{ aboutUsTitle }}</p>
+                <hr class="content_lineUnder" />
+              </div>
             </div>
-            <hr class="content_lineUnder" />
           </b-col>
         </b-row>
         <!-- About Eau de Web Title End-->
+
+        <!-- About Eau de Web Row -->
         <b-row class="aboutus_row">
           <b-col>
             <div
-              v-for="text in about_us"
+              v-for="text in aboutus_txt"
               :key="text.slogan"
               class="aboutus_edw"
             >
@@ -27,7 +34,7 @@
                   <b-col cols="2">
                     <img
                       class="name_logo"
-                      src="@/assets/name.svg"
+                      src="@/assets/img/name.svg"
                       alt="Logo for name"
                     />
                   </b-col>
@@ -45,7 +52,7 @@
                   <b-col cols="2">
                     <img
                       class="manifesto_logo"
-                      src="@/assets/manifesto.svg"
+                      src="@/assets/img/manifesto.svg"
                       alt="Logo for name"
                     />
                   </b-col>
@@ -65,14 +72,17 @@
           </b-col>
           <b-col>
             <div class="aboutus_img">
-              <img src="@/assets/aboutus_img.png" alt="Team Photo" />
+              <img src="@/assets/img/aboutus_img.png" alt="Team Photo" />
             </div>
           </b-col>
         </b-row>
+        <!-- About Us Row End -->
+
+        <!-- About Us Btns -->
         <b-row>
           <b-col class="aboutusbtn_style">
             <div
-              v-for="text in about_us"
+              v-for="text in aboutus_btn"
               :key="text.contactus_btn"
               class="aboutus_btn"
             >
@@ -89,6 +99,7 @@
             </div>
           </b-col>
         </b-row>
+        <!-- About Us Btns End-->
       </b-container>
     </div>
     <!-- About Eau de Web End -->
@@ -99,107 +110,133 @@
         <b-row>
           <b-col class="clientwork_col" id="client_work">
             <!-- Client Work Title -->
-            <div v-for="(text, text_key) in client_work" :key="text_key">
-              <p class="clientwork_title">{{ text.title }}</p>
+            <div
+              v-for="(clientWorkTitle, clientWorkTitle_key) in clientwork_title"
+              :key="clientWorkTitle_key"
+            >
+              <div>
+                <p class="content_title">{{ clientWorkTitle }}</p>
+                <hr class="content_lineUnder" />
+              </div>
             </div>
-            <hr class="content_lineUndertwo" />
             <!-- Client Work Title End -->
           </b-col>
         </b-row>
+        <!-- Client Work Slider -->
         <b-row>
           <b-col>
-            <img src="@/assets/ec_logo.svg" alt="" class="workone_logo" />
+            <img src="@/assets/img/ec_logo.svg" alt="" class="workone_logo" />
           </b-col>
         </b-row>
         <b-row>
           <b-col cols="3"></b-col>
           <b-col cols="5">
-            <div
-              v-for="(text, text_key) in client_work"
-              :key="text_key"
+            <b-container
+              v-for="text in clientwork_txt"
+              :key="text.workone_title"
               class="content_workone"
             >
-              <p v-html="text.workone_title" class="workone_title"></p>
-              <p
-                v-html="text.workone_description"
-                class="workone_description"
-              ></p>
-            </div>
+              <b-row>
+                <b-col v-html="text.workone_title" class="workone_title">
+                </b-col>
+              </b-row>
+              <b-row>
+                <b-col
+                  v-html="text.workone_description"
+                  class="workone_description"
+                >
+                </b-col>
+              </b-row>
+              <b-row>
+                <b-col v-html="text.workone_btn" class="btn_workone"> </b-col>
+              </b-row>
+            </b-container>
           </b-col>
           <b-col cols="2"></b-col>
         </b-row>
-        <b-row>
-          <b-col>
-            <div
-              v-for="(text, text_key) in client_work"
-              :key="text_key"
-              class="btn_workone"
-            >
-              <p v-html="text.workone_btn"></p>
-            </div>
-          </b-col>
-        </b-row>
-        <b-row><b-col></b-col></b-row>
+        <!-- Client Work Slider End -->
       </b-container>
     </div>
     <!-- Client Work End -->
+
     <!-- Technologies Used -->
     <div class="tech_used">
       <b-container>
         <b-row>
           <b-col class="techused_col" id="tech_used">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.title" class="techused_title"></p>
+            <!-- Tech Used Title -->
+            <div
+              v-for="(techUsedTitle, techUsedTitle_key) in techused_title"
+              :key="techUsedTitle_key"
+            >
+              <div>
+                <p class="content_title">{{ techUsedTitle }}</p>
+                <hr class="content_lineUnder" />
+              </div>
             </div>
-            <hr class="content_lineUnderthree" />
+            <!-- Tech Used Title End -->
           </b-col>
         </b-row>
-        <b-row class="content_techused">
+        <!-- Tech Used First Row -->
+        <b-row
+          class="content_techused"
+          v-for="text in techused_txtone"
+          :key="text.semantic_web"
+        >
           <b-col cols="2">
-            <img src="@/assets/w3c_logo.svg" alt="W3C Logo" />
+            <img src="@/assets/img/w3c_logo.svg" alt="W3C Logo" />
           </b-col>
           <b-col cols="4">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.w3c" class="techused_w3c"></p>
-            </div>
+            <p v-html="text.w3c" class="techused_semanticweb"></p>
           </b-col>
           <b-col cols="2">
-            <img src="@/assets/events_logo.svg" alt="W3C Logo" />
+            <img src="@/assets/img/events_logo.svg" alt="Events Logo" />
           </b-col>
           <b-col cols="4">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.events" class="techused_events"></p>
-            </div>
+            <p v-html="text.events" class="techused_semanticweb"></p>
           </b-col>
         </b-row>
-        <b-row class="content_techusedtwo">
+        <!-- Tech Used First Row End -->
+
+        <!-- Tech Used Second Row -->
+        <b-row
+          class="content_techusedtwo"
+          v-for="text in techused_txttwo"
+          :key="text.semantic_web"
+        >
           <b-col cols="2">
-            <img src="@/assets/semanticweb_logo.svg" alt="Semantic Web Logo" />
+            <img
+              src="@/assets/img/semanticweb_logo.svg"
+              alt="Semantic Web Logo"
+            />
           </b-col>
           <b-col cols="4">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.semantic_web" class="techused_semanticweb"></p>
-            </div>
+            <p v-html="text.semantic_web" class="techused_semanticweb"></p>
           </b-col>
           <b-col cols="2">
-            <img src="@/assets/semanticweb_logo.svg" alt="Semantic Web Logo" />
+            <img
+              src="@/assets/img/semanticweb_logo.svg"
+              alt="Semantic Web Logo"
+            />
           </b-col>
           <b-col cols="4">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.semantic_web" class="techused_semanticweb"></p>
-            </div>
+            <p v-html="text.semantic_webtwo" class="techused_semanticweb"></p>
           </b-col>
         </b-row>
+        <!-- Tech Used First Row End-->
       </b-container>
     </div>
+
     <!-- Git & Clients -->
     <div class="content_techusedthree">
       <b-container>
         <b-row>
-          <b-col class="techused_textone">
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
-              <p v-html="text.text_one"></p>
-            </div>
+          <b-col
+            class="techused_textone"
+            v-for="text in techused_txtother"
+            :key="text.text_one"
+          >
+            <p v-html="text.text_one"></p>
           </b-col>
         </b-row>
       </b-container>
@@ -211,32 +248,28 @@
         <b-row>
           <b-col>
             <div class="plone_img">
-              <img src="@/assets/plone_img.png" alt="Team Photo" />
+              <img src="@/assets/img/plone_img.png" alt="Team Photo" />
             </div>
           </b-col>
           <b-col>
-            <div v-for="(text, text_key) in tech_used" :key="text_key">
+            <div v-for="text in techused_plone" :key="text.plone_title">
               <p
                 v-html="text.plone_title"
                 class="techused_plonetitle
 "
               ></p>
-            </div>
-            <b-container>
-              <b-row>
-                <b-col>
-                  <div v-for="(text, text_key) in tech_used" :key="text_key">
+              <b-container>
+                <b-row>
+                  <b-col>
                     <p
                       v-html="text.plone_text"
                       class="techused_plonetext
       "
                     ></p>
-                  </div>
-                </b-col>
-              </b-row>
-              <b-row class="plone_links">
-                <b-col>
-                  <div v-for="(text, text_key) in tech_used" :key="text_key">
+                  </b-col>
+                </b-row>
+                <b-row class="plone_links">
+                  <b-col>
                     <p
                       v-html="text.plone_linkone"
                       class="techused_plonelink
@@ -262,10 +295,10 @@
                       class="techused_plonelink
       "
                     ></p>
-                  </div>
-                </b-col>
-              </b-row>
-            </b-container>
+                  </b-col>
+                </b-row>
+              </b-container>
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -276,71 +309,43 @@
     <!-- Jobs -->
     <div class="jobs">
       <b-container>
+        <!-- Jobs Title -->
         <b-row>
           <b-col class="jobs_col" id="jobs">
-            <div v-for="(text, text_key) in jobs" :key="text_key">
-              <p
-                v-html="text.title"
-                class="jobs_title
-"
-              ></p>
+            <div
+              v-for="(jobsTitle, jobsTitle_key) in jobs_title"
+              :key="jobsTitle_key"
+            >
+              <div>
+                <p class="content_title">{{ jobsTitle }}</p>
+                <hr class="content_lineUnder" />
+              </div>
             </div>
-            <hr class="content_lineUnderfour" />
           </b-col>
         </b-row>
+        <!-- Jobs Title End-->
+
+        <!-- Jobs Boxes -->
         <b-row class="jobs_content">
-          <b-col>
-            <div class="jobs_box">
-              <div v-for="(text, text_key) in jobs" :key="text_key">
-                <p
-                  v-html="text.job_titleone"
-                  class="jobs_titleone
+          <b-col
+            v-for="text in jobs_txt"
+            :key="text.job_title"
+            class="jobs_box"
+          >
+            <p
+              v-html="text.job_title"
+              class="jobs_titleone
 "
-                ></p>
-                <p
-                  v-html="text.job_descriptionone"
-                  class="jobs_descriptionone
+            ></p>
+            <p
+              v-html="text.job_description"
+              class="jobs_descriptionone
 "
-                ></p>
-                <div class="btn_jobs"><p v-html="text.job_btnone"></p></div>
-              </div>
-            </div>
-          </b-col>
-          <b-col>
-            <div class="jobs_box">
-              <div v-for="(text, text_key) in jobs" :key="text_key">
-                <p
-                  v-html="text.job_titletwo"
-                  class="jobs_titletwo
-    "
-                ></p>
-                <p
-                  v-html="text.job_descriptiontwo"
-                  class="jobs_descriptiontwo
-    "
-                ></p>
-                <div class="btn_jobs"><p v-html="text.job_btntwo"></p></div>
-              </div>
-            </div>
-          </b-col>
-          <b-col>
-            <div class="jobs_box">
-              <div v-for="(text, text_key) in jobs" :key="text_key">
-                <p
-                  v-html="text.job_titlethree"
-                  class="jobs_titlethree
-    "
-                ></p>
-                <p
-                  v-html="text.job_descriptionthree"
-                  class="jobs_descriptionthree
-    "
-                ></p>
-                <div class="btn_jobs"><p v-html="text.job_btnthree"></p></div>
-              </div>
-            </div>
+            ></p>
+            <div class="btn_jobs"><p v-html="text.job_btn"></p></div>
           </b-col>
         </b-row>
+        <!-- Jobs Boxes End-->
       </b-container>
     </div>
     <!-- Jobs End -->
@@ -349,20 +354,27 @@
     <div class="contact_us">
       <b-container>
         <b-row>
+          <!-- Contact Us Title -->
           <b-col class="contactus_col" id="contact_us">
-            <div v-for="(text, text_key) in contact_us" :key="text_key">
+            <div
+              v-for="(contactUsTitle, contactUsTitle_key) in contactus_title"
+              :key="contactUsTitle_key"
+            >
               <p
-                v-html="text.title"
-                class="contactus_title
+                class="content_titleContact
 "
-              ></p>
+              >
+                {{ contactUsTitle }}
+              </p>
+              <hr class="content_lineUnder" />
             </div>
-            <hr class="content_lineUnderfive" />
           </b-col>
+          <!-- Contact Us Title End -->
         </b-row>
+
         <b-row>
           <b-col>
-            <div v-for="(text, text_key) in contact_us" :key="text_key">
+            <div v-for="text in contactus_txt" :key="text.contact_text">
               <p
                 v-html="text.contact_text"
                 class="contactus_text
@@ -371,7 +383,8 @@
             </div>
           </b-col>
         </b-row>
-        <b-row>
+
+        <b-row class="contactmap_row">
           <b-col>
             <b-container>
               <b-row class="contactus_row">
@@ -396,11 +409,15 @@
                       class="contactus_emailtitle
 "
                     ></p>
-                    <p
-                      v-html="text.email_description"
-                      class="contactus_emaildescript
+                    <a
+                      :href="`mailto:${text.email_description}`"
+                      target="_blank"
+                      ><p
+                        v-html="text.email_description"
+                        class="contactus_emaildescript
 "
-                    ></p>
+                      ></p
+                    ></a>
                   </div>
                 </b-col>
                 <!-- Phone/Fax -->
@@ -421,8 +438,16 @@
               </b-row>
             </b-container>
           </b-col>
+          <!-- Google Maps EDW -->
           <b-col>
-            <!-- google map -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.39751858446!2d26.08024471574234!3d44.46602390750737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b2021b499f3bfb%3A0xfc73471ea7cf8a74!2sEau%20de%20Web!5e0!3m2!1sen!2sro!4v1568880378406!5m2!1sen!2sro"
+              width="100%"
+              height="480"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen=""
+            ></iframe>
           </b-col>
         </b-row>
       </b-container>
@@ -438,11 +463,20 @@ export default {
     return {};
   },
   props: {
-    about_us: Array,
-    client_work: Array,
-    tech_used: Array,
-    jobs: Array,
-    contact_us: Array
+    aboutus_title: Object,
+    aboutus_txt: Array,
+    aboutus_btn: Array,
+    clientwork_title: Object,
+    clientwork_txt: Array,
+    techused_title: Object,
+    techused_txtone: Array,
+    techused_txttwo: Array,
+    techused_txtother: Array,
+    techused_plone: Array,
+    jobs_title: Object,
+    jobs_txt: Array,
+    contactus_title: Object,
+    contactus_txt: Array
   }
 };
 </script>

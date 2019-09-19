@@ -7,11 +7,11 @@
         <b-container>
           <b-row>
             <b-col col lg="4">
-              <img
+              <a href="/"><img
                 class="edw_logo"
-                src="@/assets/edw_logo.svg"
+                src="@/assets/img/edw_logo.svg"
                 alt="Eau de Web SRL Logo"
-              />
+              /></a>
             </b-col>
             <b-col col lg="8">
               <div class="navElem">
@@ -55,7 +55,7 @@
               <div class="arrow_right">
                 <img
                   class="globe_img"
-                  src="@/assets/arrow_right.svg"
+                  src="@/assets/img/arrow_right.svg"
                   alt="Arrow pointing to the right"
                 />
               </div>
@@ -79,7 +79,7 @@ export default {
   props: {
     menu_labels: Array,
     header_text: Array,
-    header_btn: Array
+    header_btn: Object
   }
 };
 </script>

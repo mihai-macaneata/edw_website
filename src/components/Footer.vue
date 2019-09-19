@@ -1,115 +1,99 @@
 <template>
   <!-- Main Div Content -->
   <div>
-    <!-- Footer Info -->
-    <div class="footer_info" id="contact">
-      <!-- Bubbles Img -->
-      <div class="img">
-      <div class="grid">
-        <div class="row">
-            <!-- More information -->
-            <div class="col col-4-of-4 col-m-4-of-4 col-s-4-of-4">
-              <div v-for="text in footer_one" :key="text.more_info">
-                <div class="more_info">
-                  {{ text.more_info }}
-                </div>
-                <div class="more_textone">
-                  <p v-html="text.more_textone"></p>
-                </div>
-                <div class="more_texttwo">
-                  <p v-html="text.more_texttwo"></p>
-                </div>
-              </div>
+    <!-- Social media -->
+    <div class="socialmedia">
+      <b-container>
+        <b-row>
+          <b-col>
+            <div
+              v-for="(socialmedia, socialmedia_key) in social_media"
+              :key="socialmedia_key"
+            >
+              {{ title }}
             </div>
-            <!-- More information end -->
+          </b-col>
+        </b-row>
+        <b-row class="social_row" align-h="center">
+          <b-col cols="4">
+            <img
+              class="fb_logo"
+              src="@/assets/img/fb_logo.png"
+              alt="Facebook logo"
+            />
+          </b-col>
+          <b-col cols="4">
+            <img
+              class="linkedin_logo"
+              src="@/assets/img/linkedin_logo.png"
+              alt="LinkedIn logo"
+            />
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+    <!-- Social media End-->
+    <!-- Photos Row-->
+    <div class="photos-row">
+      <div class="photos_column">
+        <img src="@/assets/img/photo1.png" alt="Photo EDW One" class="photos_res" />
+      </div>
+      <div class="photos_column">
+        <img src="@/assets/img/photo2.png" alt="Photo EDW Two" class="photos_res" />
+      </div>
+      <div class="photos_column">
+        <img
+          src="@/assets/img/photo3.png"
+          alt="Photo EDW Three"
+          class="photos_res"
+        />
+      </div>
+      <div class="photos_column">
+        <img
+          src="@/assets/img/photo4.png"
+          alt="Photo EDW Four"
+          class="photos_res"
+        />
+      </div>
+    </div>
+    <!-- Photos Row End-->
 
-            <!-- Contact -->
-            <div class="col col-4-of-4 col-m-4-of-4">
-              <div v-for="text in footer_two" :key="text.contact">
-                <div class="contact">
-                  {{ text.contact }}
-                </div>
-                <div class="contact_contents">
-                  <div class="secretariat">
-                    {{ text.secretariat }}
-                    <a :href="`mailto:${text.secretariat_email}`" target="_blank" class="emails">{{
-                      text.secretariat_email
-                    }}</a>
-                  </div>
-                  <div class="chair">
-                    {{ text.chair }}
-                    <a :href="`mailto:${text.chair_email}`" target="_blank" class="emails col-s-4-of-4">{{
-                      text.chair_email
-                    }}</a>
-                  </div>
-                </div>
+    <!-- Footer black -->
+    <div class="footer_black">
+      <b-container>
+        <b-row class="footerblack_row">
+          <b-col>
+            <div v-for="text in footer_left" :key="text.title">
+              <div>
+                <a href="/"
+                  ><img
+                    class="edw_logo"
+                    src="@/assets/img/edw_logo.svg"
+                    alt="Eau de Web SRL Logo"
+                /></a>
+                <p v-html="text.title" class="header_title"></p>
               </div>
-              <!-- Contact End -->
+              <p v-html="text.linksone_footer" class="header_description"></p>
             </div>
-        </div>
-        <!-- End Row -->
-      </div>
-      <!-- End Grid -->
+          </b-col>
+          <b-col> </b-col>
+        </b-row>
+      </b-container>
     </div>
-    <!-- Bubble Img End -->
-    </div>
-    <!-- Footer Info End -->
-
-    <!-- Footer Powered By -->
-    <div class="footer_text">
-      <div class="grid">
-        <div
-          class="row footer_center"
-          v-for="text in footer_three"
-          :key="text.text_one"
-        >
-          <!-- Csirts Network Text-->
-          <div class="col col-1-of-4 col-m-2-of-4 col-s-2-of-4 csirts_network">
-            {{ text.text_one }}
-          </div>
-          <!-- Csirts Network Text End -->
-
-          <!-- Enisa Logo -->
-          <div class="col col-1-of-2 col-m-2-of-4 col-s-2-of-4 enisa_logo">
-            <a :href="text.link_one">
-
-            <!-- <img
-              src="@/assets/enisa_logo.png"
-              alt="Enisa logo"
-              class="enisa-logo"
-            /> -->
-            </a>
-          </div>
-          <!-- Enisa Logo End -->
-          <!-- Check Enisa -->
-          <div class="col col-1-of-2 col-m-4-of-4 check_enisa">
-            <span class="col-s-4-of-4"> {{ text.text_two }} </span>
-            <!-- links -->
-            <span class="col-s-4-of-4 links_enisa">
-              <a :href="text.link_one" class="enisalink_one" target="_blank">{{
-                text.link_one_text
-              }}</a>
-              <span class="between_links"> / </span>
-              <a :href="text.link_two" class="enisalink_two" target="_blank">{{
-                text.link_two_text
-              }}</a>
-            </span>
-          </div>
-          <!-- Check Enisa End -->
-        </div>
-        <!-- End Row -->
-      </div>
-      <!-- End Grid -->
-    </div>
-    <!-- Footer Powered By End -->
+    <!-- Footer black End-->
   </div>
   <!-- Main Div Content End -->
 </template>
 
 <script>
 export default {
+  data() {
+    return {};
+  },
   props: {
-    footer: Array
+    socialmedia_title: Object,
+    footer_left: Array,
+    footer_right: Array
   }
 };
 </script>

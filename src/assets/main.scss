@@ -12,7 +12,7 @@ body {
 // header img
 .header_image {
   background-size: cover;
-  background-image: url(headerimg.png);
+  background-image: url(img/headerimg.png);
   min-height: 100vh;
 }
 // navigation
@@ -42,7 +42,7 @@ body {
         }
         &:last-child {
           margin-right: 0px;
-          background: url(globe.svg) no-repeat;
+          background: url(img/globe.svg) no-repeat;
           background-size: 31px;
           color: transparent;
         }
@@ -110,6 +110,26 @@ body {
 
 /* Body Component */
 
+.content_title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 35px;
+  display: flex;
+  justify-content: center; //horizontal align
+  align-items: center; //vertical align
+  padding-bottom: -5px;
+}
+
+.content_titleContact{
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 35px;
+  display: flex;
+  justify-content: center; //horizontal align
+  align-items: center; //vertical align
+  padding-bottom: -5px;
+}
+
 .content_lineUnder {
   border-color: #d5fa3b;
   border-width: 2px;
@@ -117,12 +137,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-// .edw_links {
-//   color: #d5fa3b;
-//   border-bottom: 1px solid #d5fa3b;
-//   text-decoration: none;
-// }
 
 .edw_links {
   color: #d5fa3b;
@@ -149,15 +163,6 @@ body {
     transform-origin: bottom left;
     transform: skewY(5deg);
     z-index: -8;
-  }
-  .aboutus_title {
-    color: #fff;
-    font-weight: 700;
-    font-size: 35px;
-    display: flex;
-    justify-content: center; //horizontal align
-    align-items: center; //vertical align
-    padding-bottom: -5px;
   }
 
   .aboutus_container {
@@ -279,14 +284,6 @@ body {
       // position: relative;
     }
   }
-  .content_lineUndertwo {
-    border-color: #d5fa3b;
-    border-width: 2px;
-    width: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -35px;
-  }
 
   .workone_logo {
     display: flex;
@@ -303,13 +300,15 @@ body {
   .workone_title {
     font-weight: 700;
     font-size: 20px;
-    display: inline-flex;
-    justify-content: center; //horizontal align
-    align-items: center; //vertical align
+    padding-top: 20px;
+    // display: inline-flex;
+    // justify-content: center; //horizontal align
+    // align-items: center; //vertical align
   }
   .workone_description {
     font-weight: 400;
     font-size: 18px;
+    padding-top: 20px;
   }
 
   .btn_workone {
@@ -317,6 +316,7 @@ body {
     display: flex;
     justify-content: center; //horizontal align
     align-items: center; //vertical align
+    padding-top: 25px;
     cursor: pointer;
     .workone_btn {
       font-size: 18px;
@@ -372,14 +372,7 @@ body {
       justify-content: center; //horizontal align
       align-items: center; //vertical align
     }
-    .content_lineUnderthree {
-      border-color: #d5fa3b;
-      border-width: 2px;
-      width: 80px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: -35px;
-    }
+
   }
 
   .content_techused,
@@ -417,7 +410,7 @@ body {
     text-align: center;
   }
 }
-
+//plone
 .content_techusedfour {
   background-color: #1e1e1e;
   padding: 150px 0 150px 0;
@@ -430,18 +423,19 @@ body {
     font-weight: 700;
     font-size: 20px;
     margin-top: -5px;
+    margin-left: 25px;
   }
   .techused_plonetext {
     color: #fff;
     font-weight: 400;
     font-size: 18px;
-    margin-left: -15px;
+    margin-left: 10px;
   }
   .plone_links {
-    margin-top: -10px;
+    margin-top: 10px;
     .techused_plonelink {
       margin-top: -6px;
-      margin-left: -15px;
+      margin-left: 10px;
     }
   }
 }
@@ -449,9 +443,8 @@ body {
 //Jobs
 .jobs {
   background-color: #7db621;
-  padding: 150px 0 150px 0;
+  padding: 150px 0 180px 0;
   .jobs_col {
-    // margin-top: 100px;
     .jobs_title {
       color: #fff;
       font-weight: 700;
@@ -460,22 +453,17 @@ body {
       justify-content: center; //horizontal align
       align-items: center; //vertical align
     }
-    .content_lineUnderfour {
-      border-color: #d5fa3b;
-      border-width: 2px;
-      width: 80px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: -45px;
-    }
+
   }
 
   .jobs_content {
     margin-top: 60px;
     .jobs_box {
+      margin-left: 5px;
       background-color: #fff;
       border-radius: 35px;
-      padding: 80px 40px;
+      padding: 80px 30px;
+      height: 450px;
       box-shadow: 0px 4px 15px rgba(30, 30, 30, 0.1);
       .jobs_titleone,
       .jobs_titletwo,
@@ -492,11 +480,12 @@ body {
         font-weight: 400;
         font-size: 18px;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
       }
 
       .btn_jobs {
         text-align: center;
+        // padding-top: 200px;
         cursor: pointer;
         .jobs_btn {
           font-size: 18px;
@@ -516,7 +505,7 @@ body {
 //Contact us
 .contact_us {
   background-color: #fff;
-  padding: 150px 0 150px 0;
+  padding: 150px 0 80px 0;
 
   .contactus_title {
     color: #1e1e1e;
@@ -526,37 +515,85 @@ body {
     justify-content: center; //horizontal align
     align-items: center; //vertical align
   }
-  .content_lineUnderfive {
-    border-color: #d5fa3b;
-    border-width: 2px;
-    width: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -35px;
-  }
+
   .contactus_text {
     color: #1e1e1e;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
   }
-  .contactus_row {
-    margin-left: -30px;
-    .contactus_addresstitle,
-    .contactus_phonetitle,
-    .contactus_emailtitle {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1e1e1e;
-      margin-bottom: 5px;
+  // Map + Address Detais Row
+  .contactmap_row {
+    margin-top: 50px;
+    // Address, Phone, Email Row
+    .contactus_row {
+      margin-top: 20px;
+      margin-left: -30px;
+      .contactus_addresstitle,
+      .contactus_phonetitle,
+      .contactus_emailtitle {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1e1e1e;
+        margin-bottom: 5px;
+      }
+      .contactus_addressdescript,
+      .contactus_phonedescript,
+      .contactus_emaildescript {
+        font-size: 17px;
+        font-weight: 400;
+        color: #1e1e1e;
+      }
+      .contactus_emaildescript {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/* Body Component End */
+
+/* Footer Component */
+//Social media
+.footer_socialtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e1e1e;
+  text-align: center;
+}
+.social_row {
+  width: 25%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  .fb_logo,
+  .linkedin_logo {
+    width: 100%;
+  }
+  .linkedin_logo {
+    margin-left: -5px;
+  }
+}
+.photos-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  .photos_column {
+    // overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    img {
+      width: 100%;
     }
   }
 }
 
-/* Body Component End */
-
-/* Footer Component */
-
+.footer_black {
+  background-color: #1e1e1e;
+  padding: 20px 0 20px 0;
+}
 /* Footer Component End */
 
 /* Media Queries */
