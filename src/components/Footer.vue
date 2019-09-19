@@ -7,10 +7,10 @@
         <b-row>
           <b-col>
             <div
-              v-for="(socialmedia, socialmedia_key) in social_media"
-              :key="socialmedia_key"
+              v-for="(socialmedia, socialmedia_key) in socialmedia_title"
+              :key="socialmedia_key" class="footer_socialtitle"
             >
-              {{ title }}
+              {{ socialmedia }}
             </div>
           </b-col>
         </b-row>

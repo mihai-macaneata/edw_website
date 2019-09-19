@@ -332,17 +332,23 @@
             :key="text.job_title"
             class="jobs_box"
           >
-            <p
-              v-html="text.job_title"
-              class="jobs_titleone
+            <div class="">
+              <div class="title_div">
+                <p
+                  v-html="text.job_title"
+                  class="jobs_title
 "
-            ></p>
-            <p
-              v-html="text.job_description"
-              class="jobs_descriptionone
+                ></p>
+              </div>
+              <div class="scrollbar">
+                <p
+                  v-html="text.job_description"
+                  class="jobs_description
 "
-            ></p>
-            <div class="btn_jobs"><p v-html="text.job_btn"></p></div>
+                ></p>
+              </div>
+              <div class="btn_jobs"><p v-html="text.job_btn"></p></div>
+            </div>
           </b-col>
         </b-row>
         <!-- Jobs Boxes End-->
@@ -373,67 +379,61 @@
         </b-row>
 
         <b-row>
-          <b-col>
+          <b-col class="contactus_text">
             <div v-for="text in contactus_txt" :key="text.contact_text">
-              <p
-                v-html="text.contact_text"
-                class="contactus_text
-"
-              ></p>
+              <p v-html="text.contact_text"></p>
             </div>
           </b-col>
         </b-row>
 
+        <!-- Contact and Map Row -->
         <b-row class="contactmap_row">
           <b-col>
             <b-container>
-              <b-row class="contactus_row">
+              <b-row
+                class="contactus_row"
+                v-for="text in contactus_txt"
+                :key="text.address_title"
+              >
                 <!-- Address -->
                 <b-col>
-                  <div v-for="(text, text_key) in contact_us" :key="text_key">
-                    <p
-                      v-html="text.address_title"
-                      class="contactus_addresstitle
+                  <p
+                    v-html="text.address_title"
+                    class="contactus_addresstitle
 "
-                    ></p>
-                    <p
-                      v-html="text.address_description"
-                      class="contactus_addressdescript
+                  ></p>
+                  <p
+                    v-html="text.address_description"
+                    class="contactus_addressdescript
 "
-                    ></p>
-                  </div>
-                  <!-- Phone/Fax -->
-                  <div v-for="(text, text_key) in contact_us" :key="text_key">
-                    <p
-                      v-html="text.email_title"
-                      class="contactus_emailtitle
+                  ></p>
+
+                  <!-- Email-->
+                  <p
+                    v-html="text.email_title"
+                    class="contactus_emailtitle
 "
-                    ></p>
-                    <a
-                      :href="`mailto:${text.email_description}`"
-                      target="_blank"
-                      ><p
-                        v-html="text.email_description"
-                        class="contactus_emaildescript
+                  ></p>
+                  <a :href="`mailto:${text.email_description}`" target="_blank"
+                    ><p
+                      v-html="text.email_description"
+                      class="contactus_emaildescript
 "
-                      ></p
-                    ></a>
-                  </div>
+                    ></p
+                  ></a>
                 </b-col>
                 <!-- Phone/Fax -->
                 <b-col>
-                  <div v-for="(text, text_key) in contact_us" :key="text_key">
-                    <p
-                      v-html="text.phone_title"
-                      class="contactus_phonetitle
+                  <p
+                    v-html="text.phone_title"
+                    class="contactus_phonetitle
 "
-                    ></p>
-                    <p
-                      v-html="text.phone_description"
-                      class="contactus_phonedescript
+                  ></p>
+                  <p
+                    v-html="text.phone_description"
+                    class="contactus_phonedescript
 "
-                    ></p>
-                  </div>
+                  ></p>
                 </b-col>
               </b-row>
             </b-container>
@@ -450,6 +450,7 @@
             ></iframe>
           </b-col>
         </b-row>
+        <!-- Contact and Map Row End -->
       </b-container>
     </div>
     <!-- Contact End -->
