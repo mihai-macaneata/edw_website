@@ -32,6 +32,7 @@ body {
         list-style-type: none;
         font-size: 20px;
         font-weight: 400;
+
         text-transform: uppercase;
         &:nth-last-child(2) {
           //contact txt
@@ -244,7 +245,7 @@ body {
   // margin-top: 20px;
   // background-color: #545454;
   position: relative;
-  padding-bottom: 200px;
+  padding: 250px 0 250px 0;
   ::before {
     position: absolute;
     content: "";
@@ -272,7 +273,7 @@ body {
   }
 
   .clientwork_col {
-    margin-top: 220px;
+    // margin-top: 250px;
     .clientwork_title {
       color: #fff;
       font-weight: 700;
@@ -422,7 +423,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     margin-top: -5px;
-    margin-left: 25px;
+    margin-left: 10px;
   }
   .techused_plonetext {
     color: #fff;
@@ -456,6 +457,7 @@ body {
 
   .jobs_content {
     margin-top: 60px;
+    margin-left: -40px;
     .jobs_box {
       background-color: #fff;
       border-radius: 35px;
@@ -494,7 +496,7 @@ body {
         // position: absolute;
         // left: 25%;
         // bottom: 10%;
-        padding-top:30px;
+        padding-top: 30px;
         cursor: pointer;
         .jobs_btn {
           font-size: 18px;
@@ -600,9 +602,55 @@ body {
   }
 }
 
+//Footer
 .footer_black {
   background-color: #1e1e1e;
-  padding: 20px 0 20px 0;
+  padding: 25px 0 25px 0;
+
+    .footerright_row {
+      margin-left: -30px;
+      .footer_title,
+      .footer_linksone {
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+      }
+      .footer_title {
+        font-weight: 700;
+        margin: 8px 0 0 0;
+      }
+      .footer_linksone {
+        margin-top: 20px;
+        margin-left: -34px;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        :hover {
+          color: #b5b5b5;
+        }
+      }
+    }
+    .footer_right {
+      text-align: right;
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 20px;
+      .footer_copyright {
+        margin-top: -15px;
+      }
+      .footer_linkstwo {
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        :hover {
+          color: #b5b5b5;
+        }
+      }
+    }
+
 }
 /* Footer Component End */
 

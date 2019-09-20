@@ -11,7 +11,7 @@
               v-for="(aboutUsTitle, aboutUsTitle_key) in aboutus_title"
               :key="aboutUsTitle_key"
             >
-              <div>
+              <div data-aos="fade-up">
                 <p class="content_title">{{ aboutUsTitle }}</p>
                 <hr class="content_lineUnder" />
               </div>
@@ -28,9 +28,9 @@
               :key="text.slogan"
               class="aboutus_edw"
             >
-              <p v-html="text.slogan" class="slogan"></p>
+              <p v-html="text.slogan" class="slogan" data-aos="fade-up"></p>
               <b-container>
-                <b-row class="name_row">
+                <b-row class="name_row" data-aos="fade-up">
                   <b-col cols="2">
                     <img
                       class="name_logo"
@@ -39,7 +39,10 @@
                     />
                   </b-col>
                   <b-col cols="10">
-                    <p v-html="text.nameCard_title" class="nameCard_title"></p>
+                    <p
+                      v-html="text.nameCard_title"
+                      class="nameCard_title"
+                    ></p>
                     <p
                       v-html="text.nameCard_descript"
                       class="nameCard_descript"
@@ -48,22 +51,25 @@
                 </b-row>
               </b-container>
               <b-container>
-                <b-row class="manifesto_row">
+                <b-row class="manifesto_row" data-aos="fade-up">
                   <b-col cols="2">
                     <img
                       class="manifesto_logo"
                       src="@/assets/img/manifesto.svg"
                       alt="Logo for name"
+
                     />
                   </b-col>
                   <b-col cols="10">
                     <p
                       v-html="text.manifestoCard_title"
                       class="manifestoCard_title"
+
                     ></p>
                     <p
                       v-html="text.manifestoCard_descript"
                       class="manifestoCard_descript"
+
                     ></p>
                   </b-col>
                 </b-row>
@@ -71,7 +77,7 @@
             </div>
           </b-col>
           <b-col>
-            <div class="aboutus_img">
+            <div class="aboutus_img" data-aos="fade-up">
               <img src="@/assets/img/aboutus_img.png" alt="Team Photo" />
             </div>
           </b-col>
@@ -85,6 +91,7 @@
               v-for="text in aboutus_btn"
               :key="text.contactus_btn"
               class="aboutus_btn"
+              data-aos="fade-up"
             >
               <p
                 v-html="text.contactus_btn"
@@ -114,7 +121,7 @@
               v-for="(clientWorkTitle, clientWorkTitle_key) in clientwork_title"
               :key="clientWorkTitle_key"
             >
-              <div>
+              <div data-aos="fade-up">
                 <p class="content_title">{{ clientWorkTitle }}</p>
                 <hr class="content_lineUnder" />
               </div>
@@ -169,7 +176,7 @@
               v-for="(techUsedTitle, techUsedTitle_key) in techused_title"
               :key="techUsedTitle_key"
             >
-              <div>
+              <div data-aos="fade-up">
                 <p class="content_title">{{ techUsedTitle }}</p>
                 <hr class="content_lineUnder" />
               </div>
@@ -183,16 +190,16 @@
           v-for="text in techused_txtone"
           :key="text.semantic_web"
         >
-          <b-col cols="2">
+          <b-col cols="2" data-aos="fade-up">
             <img src="@/assets/img/w3c_logo.svg" alt="W3C Logo" />
           </b-col>
-          <b-col cols="4">
+          <b-col cols="4" data-aos="fade-up">
             <p v-html="text.w3c" class="techused_semanticweb"></p>
           </b-col>
-          <b-col cols="2">
+          <b-col cols="2" data-aos="fade-up">
             <img src="@/assets/img/events_logo.svg" alt="Events Logo" />
           </b-col>
-          <b-col cols="4">
+          <b-col cols="4" data-aos="fade-up">
             <p v-html="text.events" class="techused_semanticweb"></p>
           </b-col>
         </b-row>
@@ -204,22 +211,22 @@
           v-for="text in techused_txttwo"
           :key="text.semantic_web"
         >
-          <b-col cols="2">
+          <b-col cols="2" data-aos="fade-up">
             <img
               src="@/assets/img/semanticweb_logo.svg"
               alt="Semantic Web Logo"
             />
           </b-col>
-          <b-col cols="4">
+          <b-col cols="4" data-aos="fade-up">
             <p v-html="text.semantic_web" class="techused_semanticweb"></p>
           </b-col>
-          <b-col cols="2">
+          <b-col cols="2" data-aos="fade-up">
             <img
               src="@/assets/img/semanticweb_logo.svg"
               alt="Semantic Web Logo"
             />
           </b-col>
-          <b-col cols="4">
+          <b-col cols="4" data-aos="fade-up">
             <p v-html="text.semantic_webtwo" class="techused_semanticweb"></p>
           </b-col>
         </b-row>
@@ -231,12 +238,14 @@
     <div class="content_techusedthree">
       <b-container>
         <b-row>
-          <b-col
-            class="techused_textone"
-            v-for="text in techused_txtother"
-            :key="text.text_one"
-          >
-            <p v-html="text.text_one"></p>
+          <b-col>
+            <div
+              class="techused_textone"
+              v-for="text in techused_txtother"
+              :key="text.text_one"
+            >
+              <p v-html="text.text_one" data-aos="fade-up"></p>
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -247,28 +256,29 @@
       <b-container>
         <b-row>
           <b-col>
-            <div class="plone_img">
+            <div class="plone_img" data-aos="fade-up">
               <img src="@/assets/img/plone_img.png" alt="Team Photo" />
             </div>
           </b-col>
           <b-col>
             <div v-for="text in techused_plone" :key="text.plone_title">
-              <p
-                v-html="text.plone_title"
-                class="techused_plonetitle
-"
-              ></p>
               <b-container>
                 <b-row>
                   <b-col>
                     <p
+                      v-html="text.plone_title"
+                      class="techused_plonetitle"
+                      data-aos="fade-up"
+                    ></p>
+                    <p
                       v-html="text.plone_text"
                       class="techused_plonetext
       "
+                      data-aos="fade-up"
                     ></p>
                   </b-col>
                 </b-row>
-                <b-row class="plone_links">
+                <b-row class="plone_links" data-aos="fade-up">
                   <b-col>
                     <p
                       v-html="text.plone_linkone"
@@ -316,7 +326,7 @@
               v-for="(jobsTitle, jobsTitle_key) in jobs_title"
               :key="jobsTitle_key"
             >
-              <div>
+              <div data-aos="fade-up">
                 <p class="content_title">{{ jobsTitle }}</p>
                 <hr class="content_lineUnder" />
               </div>
@@ -331,8 +341,9 @@
             v-for="text in jobs_txt"
             :key="text.job_title"
             class="jobs_box"
+            data-aos="fade-up"
           >
-            <div class="">
+            <div>
               <div class="title_div">
                 <p
                   v-html="text.job_title"
@@ -366,13 +377,15 @@
               v-for="(contactUsTitle, contactUsTitle_key) in contactus_title"
               :key="contactUsTitle_key"
             >
-              <p
-                class="content_titleContact
+              <div data-aos="fade-up">
+                <p
+                  class="content_titleContact
 "
-              >
-                {{ contactUsTitle }}
-              </p>
-              <hr class="content_lineUnder" />
+                >
+                  {{ contactUsTitle }}
+                </p>
+                <hr class="content_lineUnder" />
+              </div>
             </div>
           </b-col>
           <!-- Contact Us Title End -->
@@ -381,7 +394,7 @@
         <b-row>
           <b-col class="contactus_text">
             <div v-for="text in contactus_txt" :key="text.contact_text">
-              <p v-html="text.contact_text"></p>
+              <p v-html="text.contact_text" data-aos="fade-up"></p>
             </div>
           </b-col>
         </b-row>
@@ -393,7 +406,7 @@
               <b-row
                 class="contactus_row"
                 v-for="text in contactus_txt"
-                :key="text.address_title"
+                :key="text.address_title" data-aos="fade-up"
               >
                 <!-- Address -->
                 <b-col>
@@ -439,7 +452,7 @@
             </b-container>
           </b-col>
           <!-- Google Maps EDW -->
-          <b-col>
+          <b-col data-aos="fade-up">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.39751858446!2d26.08024471574234!3d44.46602390750737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b2021b499f3bfb%3A0xfc73471ea7cf8a74!2sEau%20de%20Web!5e0!3m2!1sen!2sro!4v1568880378406!5m2!1sen!2sro"
               width="100%"

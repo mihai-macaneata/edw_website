@@ -8,7 +8,8 @@
           <b-col>
             <div
               v-for="(socialmedia, socialmedia_key) in socialmedia_title"
-              :key="socialmedia_key" class="footer_socialtitle"
+              :key="socialmedia_key"
+              class="footer_socialtitle"
             >
               {{ socialmedia }}
             </div>
@@ -16,18 +17,22 @@
         </b-row>
         <b-row class="social_row" align-h="center">
           <b-col cols="4">
-            <img
-              class="fb_logo"
-              src="@/assets/img/fb_logo.png"
-              alt="Facebook logo"
-            />
+            <a href="https://www.facebook.com/eaudeweb/" target="_blank"
+              ><img
+                class="fb_logo"
+                src="@/assets/img/fb_logo.png"
+                alt="Facebook logo"
+            /></a>
           </b-col>
           <b-col cols="4">
-            <img
-              class="linkedin_logo"
-              src="@/assets/img/linkedin_logo.png"
-              alt="LinkedIn logo"
-            />
+            <a
+              href="https://www.linkedin.com/company/eau-de-web/about/"
+              target="_blank"
+              ><img
+                class="linkedin_logo"
+                src="@/assets/img/linkedin_logo.png"
+                alt="LinkedIn logo"
+            /></a>
           </b-col>
         </b-row>
       </b-container>
@@ -36,10 +41,18 @@
     <!-- Photos Row-->
     <div class="photos-row">
       <div class="photos_column">
-        <img src="@/assets/img/photo1.png" alt="Photo EDW One" class="photos_res" />
+        <img
+          src="@/assets/img/photo1.png"
+          alt="Photo EDW One"
+          class="photos_res"
+        />
       </div>
       <div class="photos_column">
-        <img src="@/assets/img/photo2.png" alt="Photo EDW Two" class="photos_res" />
+        <img
+          src="@/assets/img/photo2.png"
+          alt="Photo EDW Two"
+          class="photos_res"
+        />
       </div>
       <div class="photos_column">
         <img
@@ -62,21 +75,34 @@
     <div class="footer_black">
       <b-container>
         <b-row class="footerblack_row">
-          <b-col>
-            <div v-for="text in footer_left" :key="text.title">
-              <div>
-                <a href="/"
-                  ><img
-                    class="edw_logo"
-                    src="@/assets/img/edw_logo.svg"
-                    alt="Eau de Web SRL Logo"
-                /></a>
-                <p v-html="text.title" class="header_title"></p>
-              </div>
-              <p v-html="text.linksone_footer" class="header_description"></p>
+          <b-col v-for="text in footer_left" :key="text.title">
+            <b-container>
+              <b-row class="footerright_row">
+                <b-col cols="2">
+                  <a href="/"
+                    ><img
+                      class="edw_logo"
+                      src="@/assets/img/edw_logo.svg"
+                      alt="Eau de Web SRL Logo"
+                  /></a>
+                  <p v-html="text.title" class="footer_title"></p>
+                </b-col>
+                <b-col cols="10">
+                  <p v-html="text.linksone_footer" class="footer_linksone"></p>
+                </b-col>
+              </b-row>
+            </b-container>
+          </b-col>
+          <b-col cols="4">
+            <div
+              v-for="text in footer_right"
+              :key="text.linkstwo_footer"
+              class="footer_right"
+            >
+              <p v-html="text.linkstwo_footer" class="footer_linkstwo"></p>
+              <p v-html="text.text_footer" class="footer_copyright"></p>
             </div>
           </b-col>
-          <b-col> </b-col>
         </b-row>
       </b-container>
     </div>

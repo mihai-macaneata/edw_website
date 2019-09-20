@@ -7,10 +7,11 @@
         <b-container>
           <b-row>
             <b-col col lg="4">
-              <a href="/"><img
-                class="edw_logo"
-                src="@/assets/img/edw_logo.svg"
-                alt="Eau de Web SRL Logo"
+              <a href="/"
+                ><img
+                  class="edw_logo"
+                  src="@/assets/img/edw_logo.svg"
+                  alt="Eau de Web SRL Logo"
               /></a>
             </b-col>
             <b-col col lg="8">
