@@ -6,12 +6,12 @@
       <b-container class="aboutus_container">
         <!-- About Eau de Web Title -->
         <b-row>
-          <b-col id="about_us">
+          <b-col id="about_us" data-aos="fade-up">
             <div
               v-for="(aboutUsTitle, aboutUsTitle_key) in aboutus_title"
               :key="aboutUsTitle_key"
             >
-              <div data-aos="fade-up">
+              <div>
                 <p class="content_title">{{ aboutUsTitle }}</p>
                 <hr class="content_lineUnder" />
               </div>

@@ -18,21 +18,19 @@
         <b-row class="social_row" align-h="center">
           <b-col cols="4">
             <a href="https://www.facebook.com/eaudeweb/" target="_blank"
-              ><img
-                class="fb_logo"
-                src="@/assets/img/fb_logo.png"
-                alt="Facebook logo"
-            /></a>
+              ><i class="fab fa-facebook-f fb_logo"></i></a>
+          </b-col>
+          <b-col cols="4">
+            <a
+              href="https://twitter.com/eaudeweb"
+              target="_blank"
+              ><i class="fab fa-twitter twitter_logo"></i></a>
           </b-col>
           <b-col cols="4">
             <a
               href="https://www.linkedin.com/company/eau-de-web/about/"
               target="_blank"
-              ><img
-                class="linkedin_logo"
-                src="@/assets/img/linkedin_logo.png"
-                alt="LinkedIn logo"
-            /></a>
+              ><i class="fab fa-linkedin-in linkedin_logo"></i></a>
           </b-col>
         </b-row>
       </b-container>

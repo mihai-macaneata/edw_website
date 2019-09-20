@@ -1,5 +1,38 @@
 <template>
   <div id="app">
+    <!-- Header Navigation -->
+    <div class="nav_contents">
+      <b-container>
+        <b-row>
+          <b-col cols="2">
+            <a href="/"
+              ><img
+                class="edw_logo"
+                src="@/assets/img/edw_logo.svg"
+                alt="Eau de Web SRL Logo"
+            /></a>
+          </b-col>
+          <b-col cols="10">
+            <div class="navElem">
+              <ul v-for="label in data.menu_labels" :key="label.aboutUs">
+                <li v-scroll-to="'#about_us'">{{ label.aboutUs }}</li>
+                <li v-scroll-to="'#client_work'">
+                  {{ label.clientWork }}
+                </li>
+                <li v-scroll-to="'#tech_used'">{{ label.tech }}</li>
+                <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
+                <li v-scroll-to="'#contact_us'">{{ label.contact }}</li>
+                <li class="globe_img">
+                  img
+                </li>
+              </ul>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+    <!-- Header Navigation End -->
+
     <Header
       :menu_labels="data.menu_labels"
       :header_text="data.header_text"
@@ -46,6 +79,21 @@ export default {
     return {
       data: data
     };
+  },
+  mounted() {
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll > 200) {
+        $(".nav_contents").css("background", "#1e1e1e");
+      } else {
+        $(".nav_contents").css("background", "transparent");
+      }
+    });
+  },
+  props: {
+    menu_labels: Array,
+    header_text: Array,
+    header_btn: Object
   }
 };
 </script>

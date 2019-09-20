@@ -3,7 +3,7 @@
   <div>
     <div class="header_image">
       <!-- Header Navigation -->
-      <nav class="nav_contents">
+      <!-- <nav class="nav_contents">
         <b-container>
           <b-row>
             <b-col col lg="4">
@@ -32,17 +32,19 @@
             </b-col>
           </b-row>
         </b-container>
-      </nav>
+      </nav> -->
       <!-- Header Navigation End -->
 
       <!-- Header Content -->
       <div class="header_content">
         <!-- Header Text -->
         <div class="header_text">
+          <!-- Header Title and Description -->
           <div v-for="text in header_text" :key="text.title">
             <p v-html="text.title" class="header_title"></p>
             <p v-html="text.description" class="header_description"></p>
           </div>
+          <!-- Header Title and Description End -->
           <!-- Header Btn -->
           <div class="btn_center">
             <div class="header_btn" v-scroll-to="'#about_us'">
