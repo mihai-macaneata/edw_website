@@ -1,6 +1,5 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Slider from "@/components/Slider.vue";
 import LayoutPlugin from "bootstrap-vue";
 import NavbarPlugin from "bootstrap-vue";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -14,7 +13,9 @@ import "@fortawesome/fontawesome-free/js/all.js";
 import BackToTop from "vue-backtotop";
 // import "@/scrollspy/scrollspy.min.js";
 // import VueCarousel from '@chenfengyuan/vue-carousel';
-import Slick from "vue-slick";
+// import Slick from "vue-slick";
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false;
 var VueScrollTo = require("vue-scrollto");
@@ -24,7 +25,8 @@ Vue.use(LayoutPlugin);
 Vue.use(NavbarPlugin);
 Vue.use(BackToTop);
 // Vue.use(VueCarousel);
-Vue.use(Slick);
+// Vue.use(Slick);
+Vue.use(VueAwesomeSwiper);
 
 new Vue({
   created() {

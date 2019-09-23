@@ -24,7 +24,7 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
 
   #about_us {
@@ -273,6 +273,7 @@ body {
 }
 
 // Client Work
+
 .client_work {
   // margin-top: 20px;
   // background-color: #545454;
@@ -318,15 +319,17 @@ body {
     }
   }
 
-  .example-slide {
-    align-items: center;
-    background-color: red;
-    color: #999;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: center;
-    min-height: 10rem;
-  }
+  //slider
+  // .prev_button{
+  //   background-image: url();
+  //   left: 10px;
+  //   right: auto;
+  // }
+  // .next_button{
+  //   background-image: url();
+  //   right: 10px;
+  //   left: auto;
+  // }
 
   .workone_logo {
     display: flex;
@@ -378,6 +381,7 @@ body {
     }
   }
 }
+
 
 // Technologies Used
 .tech_used {

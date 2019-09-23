@@ -126,7 +126,7 @@
         <!-- Client Work Slider -->
         <b-row>
           <b-col>
-            <Slider />
+            <Slider :cwText="clientwork_txt" />
           </b-col>
         </b-row>
         <!-- Client Work Slider End -->

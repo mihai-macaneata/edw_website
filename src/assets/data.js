@@ -48,20 +48,29 @@ export default {
   },
   clientwork_txt: [
     {
-      workone_title: "The European Commission",
-      workone_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
+      work_photo: require("@/assets/img/ec_logo.svg"),
+      work_title: "The European Commission",
+      work_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
        Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
        <a href="#" class="edw_links">RDF data cubes</a>.`,
-      workone_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
-    } // },
-    // {
-    //   worktwo_title: "European Environment Agency",
-    //   worktwo_description: `The EEA is the largest European Commission agency, which aims to support sustainable development and to help
-    //   achieve significant and measurable improvement in Europe's environment through the provision of timely, targeted, relevant and reliable info.
-    //   Since 2010 we are in charge of the framework contracts for Zope/Plone web development, including EEA’s main website,
-    //   the European Environment Information and Observation Network and the European Nature Information System.`,
-    //   worktwo_btn: `<a href="http://www.eea.europa.eu/" target="_blank" class="worktwo_btn">Visit website</a>`
-    // }
+      work_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
+    },
+    {
+      work_photo: require("@/assets/img/eea.png"),
+      work_title: "The EEA",
+      work_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
+       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
+       <a href="#" class="edw_links">RDF data cubes</a>.`,
+      work_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
+    },
+    {
+      work_photo: require("@/assets/img/enisa.png"),
+      work_title: "Enisa",
+      work_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
+       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
+       <a href="#" class="edw_links">RDF data cubes</a>.`,
+      work_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
+    }
   ],
   //Client Work Section End
 
