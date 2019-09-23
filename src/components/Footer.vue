@@ -18,24 +18,37 @@
         <b-row class="social_row" align-h="center">
           <b-col cols="4">
             <a href="https://www.facebook.com/eaudeweb/" target="_blank"
-              ><i class="fab fa-facebook-f fb_logo"></i></a>
+              ><i class="fab fa-facebook-f fb_logo"></i
+            ></a>
           </b-col>
           <b-col cols="4">
-            <a
-              href="https://twitter.com/eaudeweb"
-              target="_blank"
-              ><i class="fab fa-twitter twitter_logo"></i></a>
+            <a href="https://twitter.com/eaudeweb" target="_blank"
+              ><i class="fab fa-twitter twitter_logo"></i
+            ></a>
           </b-col>
           <b-col cols="4">
             <a
               href="https://www.linkedin.com/company/eau-de-web/about/"
               target="_blank"
-              ><i class="fab fa-linkedin-in linkedin_logo"></i></a>
+              ><i class="fab fa-linkedin-in linkedin_logo"></i
+            ></a>
           </b-col>
         </b-row>
       </b-container>
     </div>
     <!-- Social media End-->
+    <b-container>
+      <b-row>
+        <b-col>
+          <back-to-top class="btn-up">
+            <button type="button" class="btn btn-to-top">
+              <i class="fa fa-chevron-up"></i>
+            </button>
+          </back-to-top>
+        </b-col>
+      </b-row>
+    </b-container>
+
     <!-- Photos Row-->
     <div class="photos-row">
       <div class="photos_column">
@@ -77,7 +90,7 @@
             <b-container>
               <b-row class="footerright_row">
                 <b-col cols="2">
-                  <a href="/"
+                  <a href="#"
                     ><img
                       class="edw_logo"
                       src="@/assets/img/edw_logo.svg"

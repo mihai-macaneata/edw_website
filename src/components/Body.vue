@@ -39,10 +39,7 @@
                     />
                   </b-col>
                   <b-col cols="10">
-                    <p
-                      v-html="text.nameCard_title"
-                      class="nameCard_title"
-                    ></p>
+                    <p v-html="text.nameCard_title" class="nameCard_title"></p>
                     <p
                       v-html="text.nameCard_descript"
                       class="nameCard_descript"
@@ -57,19 +54,16 @@
                       class="manifesto_logo"
                       src="@/assets/img/manifesto.svg"
                       alt="Logo for name"
-
                     />
                   </b-col>
                   <b-col cols="10">
                     <p
                       v-html="text.manifestoCard_title"
                       class="manifestoCard_title"
-
                     ></p>
                     <p
                       v-html="text.manifestoCard_descript"
                       class="manifestoCard_descript"
-
                     ></p>
                   </b-col>
                 </b-row>
@@ -132,34 +126,8 @@
         <!-- Client Work Slider -->
         <b-row>
           <b-col>
-            <img src="@/assets/img/ec_logo.svg" alt="" class="workone_logo" />
+            <Slider />
           </b-col>
-        </b-row>
-        <b-row>
-          <b-col cols="3"></b-col>
-          <b-col cols="5">
-            <b-container
-              v-for="text in clientwork_txt"
-              :key="text.workone_title"
-              class="content_workone"
-            >
-              <b-row>
-                <b-col v-html="text.workone_title" class="workone_title">
-                </b-col>
-              </b-row>
-              <b-row>
-                <b-col
-                  v-html="text.workone_description"
-                  class="workone_description"
-                >
-                </b-col>
-              </b-row>
-              <b-row>
-                <b-col v-html="text.workone_btn" class="btn_workone"> </b-col>
-              </b-row>
-            </b-container>
-          </b-col>
-          <b-col cols="2"></b-col>
         </b-row>
         <!-- Client Work Slider End -->
       </b-container>
@@ -406,7 +374,8 @@
               <b-row
                 class="contactus_row"
                 v-for="text in contactus_txt"
-                :key="text.address_title" data-aos="fade-up"
+                :key="text.address_title"
+                data-aos="fade-up"
               >
                 <!-- Address -->
                 <b-col>
@@ -472,6 +441,7 @@
 </template>
 
 <script>
+import Slider from "./Slider";
 export default {
   data() {
     return {};
@@ -491,6 +461,9 @@ export default {
     jobs_txt: Array,
     contactus_title: Object,
     contactus_txt: Array
+  },
+  components: {
+    Slider
   }
 };
 </script>

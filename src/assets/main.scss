@@ -19,17 +19,20 @@ body {
   min-height: 100vh;
 }
 // navigation
-.nav_contents{
+.nav_contents {
   background: transparent;
   padding-top: 30px;
   padding-bottom: 20px;
   position: fixed;
   z-index: 1;
+  width: 100%;
 
-width:100%;
+  #about_us {
+    color: red;
+  }
+
   .navElem {
     float: right;
-    color: #fff;
     cursor: pointer;
     ul {
       display: flex;
@@ -40,8 +43,15 @@ width:100%;
         list-style-type: none;
         font-size: 20px;
         font-weight: 400;
-
         text-transform: uppercase;
+
+        color: #fff;
+        &:hover {
+          color: #d5fa3b;
+        }
+        .active {
+          color: #d5fa3b;
+        }
         &:nth-last-child(2) {
           //contact txt
           margin-right: 40px;
@@ -306,6 +316,16 @@ width:100%;
       // margin-top: 100px;
       // position: relative;
     }
+  }
+
+  .example-slide {
+    align-items: center;
+    background-color: red;
+    color: #999;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    min-height: 10rem;
   }
 
   .workone_logo {
@@ -652,6 +672,29 @@ width:100%;
   }
 }
 
+.btn-up {
+  position: relative;
+  .btn-to-top {
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 22px;
+    line-height: 22px;
+    background-color: #7db621;
+    border-color: #7db621;
+    color: #fff;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -50px;
+    &:hover {
+      color: #fff;
+      background-color: #6fa715;
+      border-color: #6fa715;
+    }
+  }
+}
+
 //Footer
 .footer_black {
   background-color: #1e1e1e;
@@ -702,7 +745,6 @@ width:100%;
   }
 }
 /* Footer Component End */
-
 
 // .black{
 //   position:fixed;

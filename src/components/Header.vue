@@ -56,11 +56,12 @@
                 {{ btn }}
               </div>
               <div class="arrow_right">
-                <img
+                <!-- <img
                   class="globe_img"
                   src="@/assets/img/arrow_right.svg"
                   alt="Arrow pointing to the right"
-                />
+                /> -->
+                <i class="fa fa-chevron-right"></i>
               </div>
             </div>
           </div>
