@@ -22,11 +22,10 @@
 
         <!-- About Eau de Web Row -->
         <b-row class="aboutus_row">
-          <b-col>
+          <b-col lg="6" class="aboutus_edw">
             <div
               v-for="text in aboutus_txt"
               :key="text.slogan"
-              class="aboutus_edw"
             >
               <p v-html="text.slogan" class="slogan" data-aos="fade-up"></p>
               <b-container>
@@ -70,7 +69,7 @@
               </b-container>
             </div>
           </b-col>
-          <b-col>
+          <b-col lg="6" class="aboutusimg_col">
             <div class="aboutus_img" data-aos="fade-up">
               <img src="@/assets/img/aboutus_img.png" alt="Team Photo" />
             </div>

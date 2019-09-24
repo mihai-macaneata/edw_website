@@ -756,6 +756,69 @@ body {
 /* Mobile Styles */
 @media only screen and (max-width: 576px) {
   /* Body component */
+  .about_us {
+    .aboutus_container {
+      padding-top: 60px;
+      .aboutus_row {
+        padding-top: 50px;
+        display: flex !important;
+        flex-direction: column !important;
+        .aboutus_edw {
+          order: 2;
+          .slogan {
+            padding-top: 30px;
+            font-size: 18px;
+          }
+          //Name logo,title and description
+          .name_row {
+            padding-top: 30px;
+          }
+          .manifesto_row {
+            padding-top: 10px;
+          }
+          .nameCard_title,
+          .manifestoCard_title {
+            font-size: 16px;
+          }
+          .nameCard_descript,
+          .manifestoCard_descript {
+            font-size: 16px;
+          }
+        }
+
+        .aboutusimg_col {
+          order: 1;
+          margin-top: -20px;
+        }
+      }
+      .aboutusbtn_style {
+        padding-top: 40px;
+      }
+      // About us btns
+      .aboutus_btn {
+        margin-bottom: 60px;
+
+        .contactus_btn {
+          font-size: 16px;
+          padding: 15px 35px;
+          &:hover {
+            color: #fff;
+            background-color: #7db621;
+            border: none;
+          }
+        }
+        .jobs_btn {
+          font-size: 16px;
+          padding: 15px 35px;
+          &:hover {
+            color: #7db621;
+            border: 1px solid #7db621;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
 
   .client_work {
     padding: 100px 0 100px 0;
@@ -861,7 +924,7 @@ body {
   /*Footer Component */
 
   .social_row {
-    width: 80%;
+    width: 65%;
     .fb_logo,
     .linkedin_logo,
     .twitter_logo {
@@ -909,11 +972,67 @@ body {
   .about_us {
     .aboutus_container {
       padding-top: 80px;
+      .aboutus_row {
+        padding-top: 50px;
+        display: flex !important;
+        flex-direction: column !important;
+        .aboutus_edw {
+          order: 2;
+          .slogan {
+            padding-top: 30px;
+            font-size: 18px;
+          }
+          //Name logo,title and description
+          .name_row {
+            padding-top: 30px;
+          }
+          .manifesto_row {
+            padding-top: 10px;
+          }
+          .nameCard_title,
+          .manifestoCard_title {
+            font-size: 16px;
+          }
+          .nameCard_descript,
+          .manifestoCard_descript {
+            font-size: 16px;
+          }
+        }
+
+        .aboutusimg_col {
+          order: 1;
+          margin-top: -20px;
+        }
+      }
+      .aboutusbtn_style {
+        padding-top: 40px;
+      }
+      // About us btns
       .aboutus_btn {
         margin-bottom: 80px;
+
+        .contactus_btn {
+          font-size: 16px;
+          padding: 15px 35px;
+          &:hover {
+            color: #fff;
+            background-color: #7db621;
+            border: none;
+          }
+        }
+        .jobs_btn {
+          font-size: 16px;
+          padding: 15px 35px;
+          &:hover {
+            color: #7db621;
+            border: 1px solid #7db621;
+            background-color: transparent;
+          }
+        }
       }
     }
   }
+
   .client_work {
     padding: 150px 0 150px 0;
     .work_title {
@@ -1054,6 +1173,27 @@ body {
 /* Medium and Large */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   /*Body Component*/
+
+  .about_us {
+    .aboutus_container {
+      .aboutus_row {
+        display: flex !important;
+        flex-direction: column !important;
+        .aboutus_edw {
+          order: 2;
+          .slogan {
+            padding-top: 40px;
+          }
+        }
+
+        .aboutusimg_col {
+          order: 1;
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+
   .jobs {
     padding: 80px 0 80px 0;
     .jobs_content {

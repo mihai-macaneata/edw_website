@@ -26,8 +26,7 @@ new Vue({
   created() {
     AOS.init({
       offset: 200,
-      duration: 2000,
-      disable: window.innerWidth < 768
+      duration: window.innerWidth < 768 ? 0 : 500
     });
   },
   render: h => h(App)
