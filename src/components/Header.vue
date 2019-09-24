@@ -2,39 +2,6 @@
   <!-- Main Div Content -->
   <div>
     <div class="header_image">
-      <!-- Header Navigation -->
-      <!-- <nav class="nav_contents">
-        <b-container>
-          <b-row>
-            <b-col col lg="4">
-              <a href="/"
-                ><img
-                  class="edw_logo"
-                  src="@/assets/img/edw_logo.svg"
-                  alt="Eau de Web SRL Logo"
-              /></a>
-            </b-col>
-            <b-col col lg="8">
-              <div class="navElem">
-                <ul v-for="label in menu_labels" :key="label.aboutUs">
-                  <li v-scroll-to="'#about_us'">{{ label.aboutUs }}</li>
-                  <li v-scroll-to="'#client_work'">
-                    {{ label.clientWork }}
-                  </li>
-                  <li v-scroll-to="'#tech_used'">{{ label.tech }}</li>
-                  <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
-                  <li v-scroll-to="'#contact_us'">{{ label.contact }}</li>
-                  <li class="globe_img">
-                    img
-                  </li>
-                </ul>
-              </div>
-            </b-col>
-          </b-row>
-        </b-container>
-      </nav> -->
-      <!-- Header Navigation End -->
-
       <!-- Header Content -->
       <div class="header_content">
         <!-- Header Text -->

@@ -51,17 +51,21 @@ export default {
       work_photo: require("@/assets/img/ec_logo.svg"),
       work_title: "The European Commission",
       work_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
-       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
-       <a href="#" class="edw_links">RDF data cubes</a>.`,
+       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links" target="_blank">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
+       <a href="http://www.w3.org/TR/vocab-data-cube/" class="edw_links" target="_blank">RDF data cubes</a>.`,
       work_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
     },
     {
       work_photo: require("@/assets/img/eea.png"),
       work_title: "The EEA",
-      work_description: `Under the contract “Publishing, visualising, linking open data, hosting and broadcasting – SMART 2012/0103”,
-       Eau de Web has developed <a href="https://digital-agenda-data.eu/" class="edw_links">digital-agenda-data.eu</a>, an interactive visualisation tool for linked semantic statistical data expressed as
-       <a href="#" class="edw_links">RDF data cubes</a>.`,
-      work_btn: `<a href="http://ec.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
+      work_description: `The EEA is the largest European Commission agency, which aims to support sustainable development
+      and to help achieve significant and measurable improvement in Europe's environment through the provision of timely, targeted, relevant and reliable info.
+      <br/><br/>
+      Since 2010 we are in charge of the framework contracts for <a href="http://www.zope.org/" class="edw_links" target="_blank">Zope</a>/<a href="https://plone.org/" class="edw_links" target="_blank">Plone</a> web development,
+      including EEA’s <a href="http://www.eea.europa.eu/" class="edw_links" target="_blank">main website</a>,
+      the <a href="https://www.eionet.europa.eu/" class="edw_links" target="_blank">European Environment Information and Observation Network</a>
+      and <a href="http://eunis.eea.europa.eu/" class="edw_links" target="_blank">the European Nature Information System</a>.`,
+      work_btn: `<a href="http://www.eea.europa.eu/" target="_blank" class="workone_btn">Visit website</a>`
     },
     {
       work_photo: require("@/assets/img/enisa.png"),

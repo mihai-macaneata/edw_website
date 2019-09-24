@@ -50,29 +50,29 @@
     </b-container>
 
     <!-- Photos Row-->
-    <div class="photos-row">
-      <div class="photos_column">
+    <div class="photos_row">
+      <div class="photos_column_1">
         <img
           src="@/assets/img/photo1.png"
           alt="Photo EDW One"
           class="photos_res"
         />
       </div>
-      <div class="photos_column">
+      <div class="photos_column_2">
         <img
           src="@/assets/img/photo2.png"
           alt="Photo EDW Two"
           class="photos_res"
         />
       </div>
-      <div class="photos_column">
+      <div class="photos_column_3">
         <img
           src="@/assets/img/photo3.png"
           alt="Photo EDW Three"
           class="photos_res"
         />
       </div>
-      <div class="photos_column">
+      <div class="photos_column_4">
         <img
           src="@/assets/img/photo4.png"
           alt="Photo EDW Four"
@@ -86,10 +86,10 @@
     <div class="footer_black">
       <b-container>
         <b-row class="footerblack_row">
-          <b-col v-for="text in footer_left" :key="text.title">
+          <b-col v-for="text in footer_left" :key="text.title" cols="12" lg="8">
             <b-container>
               <b-row class="footerright_row">
-                <b-col cols="2">
+                <b-col cols="4" lg="2">
                   <a href="#"
                     ><img
                       class="edw_logo"
@@ -98,13 +98,13 @@
                   /></a>
                   <p v-html="text.title" class="footer_title"></p>
                 </b-col>
-                <b-col cols="10">
+                <b-col cols="12" lg="10">
                   <p v-html="text.linksone_footer" class="footer_linksone"></p>
                 </b-col>
               </b-row>
             </b-container>
           </b-col>
-          <b-col cols="4">
+          <b-col cols="12" lg="4">
             <div
               v-for="text in footer_right"
               :key="text.linkstwo_footer"

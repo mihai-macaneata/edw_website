@@ -107,7 +107,7 @@
 
     <!-- Client Work -->
     <div class="client_work">
-      <b-container>
+      <b-container fluid>
         <b-row>
           <b-col class="clientwork_col" id="client_work">
             <!-- Client Work Title -->
@@ -223,12 +223,12 @@
     <div class="content_techusedfour">
       <b-container>
         <b-row>
-          <b-col>
+          <b-col lg="6">
             <div class="plone_img" data-aos="fade-up">
               <img src="@/assets/img/plone_img.png" alt="Team Photo" />
             </div>
           </b-col>
-          <b-col>
+          <b-col lg="6">
             <div v-for="text in techused_plone" :key="text.plone_title">
               <b-container>
                 <b-row>
@@ -304,12 +304,12 @@
         <!-- Jobs Title End-->
 
         <!-- Jobs Boxes -->
-        <b-row class="jobs_content">
+        <b-row class="jobs_content justify-content-md-center">
           <b-col
             v-for="text in jobs_txt"
             :key="text.job_title"
             class="jobs_box"
-            data-aos="fade-up"
+            data-aos="fade-up" lg="3"
           >
             <div>
               <div class="title_div">
@@ -359,6 +359,7 @@
           <!-- Contact Us Title End -->
         </b-row>
 
+        <!-- Text after Contact Us Title -->
         <b-row>
           <b-col class="contactus_text">
             <div v-for="text in contactus_txt" :key="text.contact_text">
@@ -366,10 +367,11 @@
             </div>
           </b-col>
         </b-row>
+        <!-- Text after Contact Us Title End -->
 
         <!-- Contact and Map Row -->
         <b-row class="contactmap_row">
-          <b-col>
+          <b-col lg="6">
             <b-container>
               <b-row
                 class="contactus_row"
@@ -421,7 +423,7 @@
             </b-container>
           </b-col>
           <!-- Google Maps EDW -->
-          <b-col data-aos="fade-up">
+          <b-col data-aos="fade-up" lg="6">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.39751858446!2d26.08024471574234!3d44.46602390750737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b2021b499f3bfb%3A0xfc73471ea7cf8a74!2sEau%20de%20Web!5e0!3m2!1sen!2sro!4v1568880378406!5m2!1sen!2sro"
               width="100%"
