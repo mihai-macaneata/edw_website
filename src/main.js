@@ -13,6 +13,8 @@ import BackToTop from "vue-backtotop";
 // import "@/scrollspy/scrollspy.min.js";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
+import ScrollFixedHeader from "vuejs-scroll-fixed-header";
+// import "@/assets/scrolling-nav.js";
 
 Vue.config.productionTip = false;
 var VueScrollTo = require("vue-scrollto");
@@ -21,12 +23,13 @@ Vue.use(LayoutPlugin);
 Vue.use(NavbarPlugin);
 Vue.use(BackToTop);
 Vue.use(VueAwesomeSwiper);
+Vue.use(ScrollFixedHeader);
 
 new Vue({
   created() {
     AOS.init({
-      offset: 200,
-      duration: window.innerWidth < 768 ? 0 : 500
+      offset: 100,
+      duration: window.innerWidth < 768 ? 0 : 100
     });
   },
   render: h => h(App)

@@ -1,38 +1,89 @@
 <template>
   <div id="app">
     <!-- Header Navigation -->
+
     <div class="nav_contents">
-      <b-container>
-        <b-row>
-          <b-col cols="2">
+      <!-- <b-container>
+        <b-row> -->
+          <!-- <b-col cols="2">
             <a href="#"
               ><img
                 class="edw_logo"
                 src="@/assets/img/edw_logo.svg"
                 alt="Eau de Web SRL Logo"
             /></a>
-          </b-col>
-          <b-col cols="10">
+          </b-col> -->
+          <!-- <b-col> -->
             <div class="navElem">
-              <ul
-                v-for="label in data.menu_labels"
-                :key="label.aboutUs">
-                <li v-scroll-to="'#about_us'">
-                  {{ label.aboutUs }}
-                </li>
-                <li v-scroll-to="'#client_work'">
-                  {{ label.clientWork }}
-                </li>
-                <li v-scroll-to="'#tech_used'">{{ label.tech }}</li>
-                <li v-scroll-to="'#jobs'">{{ label.jobs }}</li>
-                <li v-scroll-to="'#contact_us'">{{ label.contact }}</li>
-                <li class="globe_img">img</li>
-              </ul>
+
+
+              <!-- <nav>
+                <ul
+                  v-for="label in data.menu_labels"
+                  :key="label.aboutUs"
+                  class="nav_list"
+                >
+                  <li v-scroll-to="'#about_us'" id="#about_us">
+                    <a href="#about_us">{{ label.aboutUs }}</a>
+                  </li>
+                  <li v-scroll-to="'#client_work'">
+                    <a href="#client_work">{{ label.clientWork }}</a>
+                  </li>
+                  <li v-scroll-to="'#tech_used'">
+                    <a href="#tech_used">{{ label.tech }}</a>
+                  </li>
+                  <li v-scroll-to="'#jobs'">
+                    <a href="#jobs">{{ label.jobs }}</a>
+                  </li>
+                  <li v-scroll-to="'#contact_us'">
+                    <a href="#contact_us">{{ label.contact }}</a>
+                  </li>
+                  <li class="globe_img">.</li>
+                </ul>
+              </nav> -->
+
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <a href="#"
+                      ><img
+                        class="edw_logo"
+                        src="@/assets/img/edw_logo.svg"
+                        alt="Eau de Web SRL Logo"
+                    /></a></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto" v-for="label in data.menu_labels" :key="label.aboutUs">
+                      <li class="nav-item" v-scroll-to="'#about_us'">
+                        <a class="nav-link js-scroll-trigger" href="#about_us">{{ label.aboutUs }}</a>
+                      </li>
+                      <li class="nav-item" v-scroll-to="'#client_work'">
+                        <a class="nav-link js-scroll-trigger" href="#client_work">{{ label.clientWork }}</a>
+                      </li>
+                      <li class="nav-item" v-scroll-to="'#tech_used'">
+                        <a class="nav-link js-scroll-trigger" href="#tech_used">{{ label.tech }}</a>
+                      </li>
+                      <li class="nav-item" v-scroll-to="'#jobs'">
+                        <a class="nav-link js-scroll-trigger" href="#jobs">{{ label.jobs }}</a>
+                      </li>
+                      <li class="nav-item" v-scroll-to="'#contact_us'">
+                        <a class="nav-link js-scroll-trigger" href="#contact_us">{{ label.contact }}</a>
+                      </li>
+                      <li class="globe_img">.</li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+
             </div>
-          </b-col>
+          <!-- </b-col>
         </b-row>
-      </b-container>
+      </b-container> -->
     </div>
+
     <!-- Header Navigation End -->
 
     <Header
@@ -80,20 +131,26 @@ export default {
   },
   data() {
     return {
-      data: data
+      data: data,
+      fixed: true
     };
   },
   mounted() {
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll > 200) {
-        $(".nav_contents").css("background", "#1e1e1e");
-      } else {
-        $(".nav_contents").css("background", "transparent");
-      }
-    });
+    //menu to black
+    // $(window).scroll(function() {
+    //   var scroll = $(window).scrollTop();
+    //   if (scroll > 200) {
+    //     $(".bg-dark").css("background", "#1e1e1e");
+    //   } else {
+    //     $(".bg-dark").css("background", "transparent");
+    //   }
+    // });
 
-     // $("#nav").scrollspy({ offset: -25 });
+    //add active class
+    // $("ul li a").click(function() {
+    //   $("ul li a.active").removeClass("active");
+    //   $(this).addClass("active");
+    // });
   },
   props: {
     menu_labels: Array

@@ -23,10 +23,7 @@
         <!-- About Eau de Web Row -->
         <b-row class="aboutus_row">
           <b-col lg="6" class="aboutus_edw">
-            <div
-              v-for="text in aboutus_txt"
-              :key="text.slogan"
-            >
+            <div v-for="text in aboutus_txt" :key="text.slogan">
               <p v-html="text.slogan" class="slogan" data-aos="fade-up"></p>
               <b-container>
                 <b-row class="name_row" data-aos="fade-up">
@@ -157,17 +154,17 @@
           v-for="text in techused_txtone"
           :key="text.semantic_web"
         >
-          <b-col cols="2" data-aos="fade-up">
-            <img src="@/assets/img/w3c_logo.svg" alt="W3C Logo" />
+          <b-col md="2" data-aos="fade-up">
+            <img src="@/assets/img/w3c_logo.svg" alt="W3C Logo" class="techused_logo"/>
           </b-col>
-          <b-col cols="4" data-aos="fade-up">
-            <p v-html="text.w3c" class="techused_semanticweb"></p>
+          <b-col md="4" data-aos="fade-up">
+            <p v-html="text.w3c" class="techused_txt"></p>
           </b-col>
-          <b-col cols="2" data-aos="fade-up">
-            <img src="@/assets/img/events_logo.svg" alt="Events Logo" />
+          <b-col md="2" data-aos="fade-up">
+            <img src="@/assets/img/events_logo.svg" alt="Events Logo" class="techused_logo"/>
           </b-col>
-          <b-col cols="4" data-aos="fade-up">
-            <p v-html="text.events" class="techused_semanticweb"></p>
+          <b-col md="4" data-aos="fade-up">
+            <p v-html="text.events" class="techused_txt"></p>
           </b-col>
         </b-row>
         <!-- Tech Used First Row End -->
@@ -178,26 +175,26 @@
           v-for="text in techused_txttwo"
           :key="text.semantic_web"
         >
-          <b-col cols="2" data-aos="fade-up">
+          <b-col md="2" data-aos="fade-up">
             <img
               src="@/assets/img/semanticweb_logo.svg"
-              alt="Semantic Web Logo"
+              alt="Semantic Web Logo" class="techused_logo"
             />
           </b-col>
-          <b-col cols="4" data-aos="fade-up">
-            <p v-html="text.semantic_web" class="techused_semanticweb"></p>
+          <b-col md="4" data-aos="fade-up">
+            <p v-html="text.semantic_web" class="techused_txt"></p>
           </b-col>
-          <b-col cols="2" data-aos="fade-up">
+          <b-col md="2" data-aos="fade-up">
             <img
               src="@/assets/img/semanticweb_logo.svg"
-              alt="Semantic Web Logo"
+              alt="Semantic Web Logo" class="techused_logo"
             />
           </b-col>
-          <b-col cols="4" data-aos="fade-up">
-            <p v-html="text.semantic_webtwo" class="techused_semanticweb"></p>
+          <b-col md="4" data-aos="fade-up">
+            <p v-html="text.semantic_webtwo" class="techused_txt"></p>
           </b-col>
         </b-row>
-        <!-- Tech Used First Row End-->
+        <!-- Tech Used Second Row End-->
       </b-container>
     </div>
 
@@ -308,7 +305,8 @@
             v-for="text in jobs_txt"
             :key="text.job_title"
             class="jobs_box"
-            data-aos="fade-up" lg="3"
+            data-aos="fade-up"
+            lg="3"
           >
             <div>
               <div class="title_div">

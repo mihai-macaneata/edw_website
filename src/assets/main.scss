@@ -10,6 +10,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+//highlighted text in green
+::selection {
+  background: #b9e475; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #b9e475; /* Gecko Browsers */
+}
+
 /* Header Component */
 
 // header img
@@ -44,29 +52,44 @@ body {
         font-size: 20px;
         font-weight: 400;
         text-transform: uppercase;
-
         color: #fff;
-        &:hover {
-          color: #d5fa3b;
-        }
-        .active {
-          color: #d5fa3b;
-        }
+        //contact txt
         &:nth-last-child(2) {
-          //contact txt
           margin-right: 40px;
           background-color: #d5fa3b;
-          color: #1e1e1e;
           padding: 5px 8px;
           &:hover {
             background-color: #b9e30c;
           }
+          a {
+            color: #1e1e1e;
+            &:hover {
+              color: #1e1e1e;
+            }
+          }
         }
+        //contact txt end
+        //nav links
+        a {
+          color: #fff;
+          &.active {
+            color: #d5fa3b;
+          }
+          &:hover {
+            color: #d5fa3b;
+            text-decoration: none;
+          }
+        }
+        //nav links @extend
+        //globe
         &:last-child {
           margin-right: 0px;
           background: url(img/globe.svg) no-repeat;
           background-size: 31px;
+          // width: 100%;
           color: transparent;
+          position: relative;
+          width: 32px;
         }
       }
     }
@@ -135,6 +158,7 @@ body {
 
 /* Body Component */
 
+//All Titles for Site Segments
 .content_title {
   color: #fff;
   font-weight: 700;
@@ -145,6 +169,7 @@ body {
   padding-bottom: -5px;
 }
 
+//Title for Contact Segment
 .content_titleContact {
   color: #1e1e1e;
   font-weight: 700;
@@ -278,7 +303,7 @@ body {
   // margin-top: 20px;
   // background-color: #545454;
   position: relative;
-  padding: 250px 0 250px 0;
+  padding: 220px 0 220px 0;
   &::before {
     position: absolute;
     content: "";
@@ -357,7 +382,7 @@ body {
     padding-top: 20px;
   }
 
-  .btn_work {
+  .work_btn {
     // margin-bottom: 200px;
     display: flex;
     justify-content: center; //horizontal align
@@ -386,7 +411,7 @@ body {
 .tech_used {
   // margin-top: 20px;
   // background-color: #1E1E1E;
-  padding-top: 150px;
+  padding-top: 80px;
   position: relative;
   &::before {
     position: absolute;
@@ -439,13 +464,10 @@ body {
     padding-bottom: 80px;
     font-size: 18px;
   }
-  .techused_w3c,
-  .techused_events,
-  .techused_semanticweb {
+  .techused_txt {
     // font-size: 18px;
     margin-left: -60px;
-    margin-top: -20px;
-    margin-right: 40px;
+    margin-top: -10px;
   }
 }
 
@@ -756,6 +778,12 @@ body {
 /* Mobile Styles */
 @media only screen and (max-width: 576px) {
   /* Body component */
+
+  .content_title,
+  .content_titleContact {
+    font-size: 25px;
+  }
+
   .about_us {
     .aboutus_container {
       padding-top: 60px;
@@ -777,12 +805,11 @@ body {
             padding-top: 10px;
           }
           .nameCard_title,
-          .manifestoCard_title {
-            font-size: 16px;
-          }
+          .manifestoCard_title,
           .nameCard_descript,
           .manifestoCard_descript {
             font-size: 16px;
+            margin-left: 15px;
           }
         }
 
@@ -809,7 +836,7 @@ body {
         }
         .jobs_btn {
           font-size: 16px;
-          padding: 15px 35px;
+          padding: 15px 52px;
           &:hover {
             color: #7db621;
             border: 1px solid #7db621;
@@ -839,7 +866,7 @@ body {
       margin-right: 25px;
     }
 
-    .btn_work {
+    .work_btn {
       display: flex;
       justify-content: left; //horizontal align
       align-items: left; //vertical align
@@ -858,12 +885,29 @@ body {
     .content_techusedtwo {
       font-size: 16px;
     }
+
+    .techused_logo {
+      width: 15%;
+    }
+    .techused_txt {
+      margin-left: 0px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .content_techused {
+      padding-top: 50px;
+    }
+    .content_techusedtwo {
+      padding-top: 0px !important;
+      padding-bottom: 60px;
+    }
   }
 
   .content_techusedthree {
     .techused_textone {
       padding: 60px 0 60px 0;
       font-size: 16px;
+      text-align: left;
     }
   }
 
@@ -899,7 +943,13 @@ body {
         margin-left: 35px !important;
         .title_div {
           .jobs_title {
-            font-size: 22px !important;
+            font-size: 20px !important;
+          }
+        }
+        .scrollbar {
+          height: 150px;
+          .jobs_description {
+            font-size: 16px !important;
           }
         }
       }
@@ -923,8 +973,12 @@ body {
 
   /*Footer Component */
 
+  .footer_socialtitle {
+    font-size: 18px;
+    margin-left: 20px;
+  }
   .social_row {
-    width: 65%;
+    width: 75%;
     .fb_logo,
     .linkedin_logo,
     .twitter_logo {
@@ -969,6 +1023,7 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   /*Body Component*/
 
+  //About Us
   .about_us {
     .aboutus_container {
       padding-top: 80px;
@@ -1035,17 +1090,20 @@ body {
 
   .client_work {
     padding: 150px 0 150px 0;
-    .work_title {
-      font-size: 18px;
-    }
+
+.content_work{
+  margin-left: 20px;
+    .work_title,
     .work_description {
       font-size: 16px;
     }
 
-    .btn_work {
+    .work_btn {
       padding-top: 50px;
     }
   }
+  }
+
 
   .tech_used {
     padding-top: 80px;
@@ -1061,6 +1119,18 @@ body {
     .content_techusedtwo {
       padding-top: 60px;
       padding-bottom: 60px;
+    }
+
+    .techused_logo {
+      width: 15%;
+    }
+    .techused_txt {
+      margin-left: 0px;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+    .content_techusedtwo {
+      padding-top: 10px !important;
     }
   }
 
@@ -1102,9 +1172,6 @@ body {
           .jobs_title {
             font-size: 22px !important;
           }
-        }
-        .btn_jobs {
-          // padding-top: 10px !important;
         }
       }
     }
@@ -1173,6 +1240,15 @@ body {
 /* Medium and Large */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   /*Body Component*/
+  .tech_used {
+    .techused_logo {
+      width: 80%;
+    }
+    .techused_txt {
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+  }
 
   .about_us {
     .aboutus_container {
@@ -1263,6 +1339,15 @@ body {
 
 /* Large and Extra Large */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  /*Body Component*/
+  // Technologies Used
+  .tech_used {
+    .techused_txt {
+      margin-left: -40px;
+      margin-top: -10px;
+    }
+  }
+
   .jobs {
     .jobs_content {
       // margin-left: -20px !important;
@@ -1272,6 +1357,7 @@ body {
       }
     }
   }
+  /*Body Component End*/
 }
 
 /* Media Queries End */

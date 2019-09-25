@@ -12,7 +12,7 @@
           <b-row>
             <b-col cols="3"></b-col>
             <b-col lg="6">
-              <b-container class="content_workone">
+              <b-container class="content_work">
                 <b-row>
                   <b-col v-html="text.work_title" class="work_title"> </b-col>
                 </b-row>
@@ -24,7 +24,7 @@
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col v-html="text.work_btn" class="btn_work"> </b-col>
+                  <b-col v-html="text.work_btn" class="work_btn"> </b-col>
                 </b-row>
               </b-container>
             </b-col>

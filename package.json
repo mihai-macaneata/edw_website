@@ -24,7 +24,8 @@
     "vue-backtotop": "^1.6.1",
     "vue-fixed-header": "^3.2.2",
     "vue-scrollto": "^2.15.0",
-    "vue-slick": "^1.1.15"
+    "vue-slick": "^1.1.15",
+    "vuejs-scroll-fixed-header": "^1.0.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.1",
