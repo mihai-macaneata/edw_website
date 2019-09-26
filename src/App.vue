@@ -1,30 +1,27 @@
 <template>
   <div id="app">
     <!-- Header Navigation -->
-
-    <div class="nav_contents">
-      <!-- <b-container>
-        <b-row> -->
-          <!-- <b-col cols="2">
+    <!-- <div class="nav_contents">
+      <b-container>
+        <b-row>
+         <b-col cols="2">
             <a href="#"
               ><img
                 class="edw_logo"
                 src="@/assets/img/edw_logo.svg"
                 alt="Eau de Web SRL Logo"
             /></a>
-          </b-col> -->
-          <!-- <b-col> -->
+          </b-col>
+          <b-col>
             <div class="navElem">
-
-
-              <!-- <nav>
+              <nav id="mainNav">
                 <ul
                   v-for="label in data.menu_labels"
                   :key="label.aboutUs"
                   class="nav_list"
                 >
                   <li v-scroll-to="'#about_us'" id="#about_us">
-                    <a href="#about_us">{{ label.aboutUs }}</a>
+                    <a class="test" href="#about_us">{{ label.aboutUs }}</a>
                   </li>
                   <li v-scroll-to="'#client_work'">
                     <a href="#client_work">{{ label.clientWork }}</a>
@@ -40,58 +37,62 @@
                   </li>
                   <li class="globe_img">.</li>
                 </ul>
-              </nav> -->
-
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-                <div class="container">
-                  <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                    <a href="#"
-                      ><img
-                        class="edw_logo"
-                        src="@/assets/img/edw_logo.svg"
-                        alt="Eau de Web SRL Logo"
-                    /></a></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto" v-for="label in data.menu_labels" :key="label.aboutUs">
-                      <li class="nav-item" v-scroll-to="'#about_us'">
-                        <a class="nav-link js-scroll-trigger" href="#about_us">{{ label.aboutUs }}</a>
-                      </li>
-                      <li class="nav-item" v-scroll-to="'#client_work'">
-                        <a class="nav-link js-scroll-trigger" href="#client_work">{{ label.clientWork }}</a>
-                      </li>
-                      <li class="nav-item" v-scroll-to="'#tech_used'">
-                        <a class="nav-link js-scroll-trigger" href="#tech_used">{{ label.tech }}</a>
-                      </li>
-                      <li class="nav-item" v-scroll-to="'#jobs'">
-                        <a class="nav-link js-scroll-trigger" href="#jobs">{{ label.jobs }}</a>
-                      </li>
-                      <li class="nav-item" v-scroll-to="'#contact_us'">
-                        <a class="nav-link js-scroll-trigger" href="#contact_us">{{ label.contact }}</a>
-                      </li>
-                      <li class="globe_img">.</li>
-                    </ul>
-                  </div>
-                </div>
               </nav>
-
-
             </div>
-          <!-- </b-col>
+          </b-col>
         </b-row>
-      </b-container> -->
-    </div>
-
+      </b-container>
+    </div> -->
     <!-- Header Navigation End -->
+
+    <b-navbar
+      toggleable="lg"
+      type="dark"
+      variant="dark"
+      sticky
+    >
+      <b-navbar-brand href="#">
+        <img
+          class="edw_logo"
+          src="@/assets/img/edw_logo.svg"
+          alt="Eau de Web SRL Logo"
+      /></b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav
+          class="navElem ml-auto" v-b-scrollspy:nav-scroller
+          v-for="label in data.menu_labels"
+          :key="label.aboutUs"
+        >
+          <b-nav-item v-scroll-to="'#about_us'" href="#about_us">{{
+            label.aboutUs
+          }}</b-nav-item>
+          <b-nav-item v-scroll-to="'#client_work'" href="#client_work">{{
+            label.clientWork
+          }}</b-nav-item>
+          <b-nav-item v-scroll-to="'#tech_used'" href="#tech">{{
+            label.tech
+          }}</b-nav-item>
+          <b-nav-item v-scroll-to="'#jobs'" href="#jobs">{{
+            label.jobs
+          }}</b-nav-item>
+          <b-nav-item v-scroll-to="'#contact_us'" href="#contact_us">{{
+            label.contact
+          }}</b-nav-item>
+          <b-nav-item class="globe_img"></b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
 
     <Header
       :menu_labels="data.menu_labels"
       :header_text="data.header_text"
       :header_btn="data.header_btn"
     />
-    <Body
+    <Body data-spy="scroll" data-target=".navElem" data-offset="50"
       :aboutus_title="data.aboutus_title"
       :aboutus_txt="data.aboutus_txt"
       :aboutus_btn="data.aboutus_btn"
@@ -140,13 +141,18 @@ export default {
     // $(window).scroll(function() {
     //   var scroll = $(window).scrollTop();
     //   if (scroll > 200) {
-    //     $(".bg-dark").css("background", "#1e1e1e");
+    //     $(".nav_contents").css("background", "#1e1e1e !important");
     //   } else {
-    //     $(".bg-dark").css("background", "transparent");
+    //     $(".nav_contents")
+    //       .css("background", "transparent !important")
+    //       .css("padding-bottom", "0px");
     //   }
     // });
+    $(window).scroll(function() {
+      $("nav").toggleClass("scrolled", $(this).scrollTop() > 200);
+    });
 
-    //add active class
+    // //add active class
     // $("ul li a").click(function() {
     //   $("ul li a.active").removeClass("active");
     //   $(this).addClass("active");

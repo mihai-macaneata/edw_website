@@ -1,6 +1,6 @@
 <template>
   <!-- Main Div Content -->
-  <div>
+  <div id="nav-scroller">
     <!-- About Eau de Web -->
     <div class="about_us">
       <b-container class="aboutus_container">
@@ -441,6 +441,8 @@
 
 <script>
 import Slider from "./Slider";
+// import "@/assets/scrolling-nav.js";
+
 export default {
   data() {
     return {};

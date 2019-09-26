@@ -1,5 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
+// import "@/assets/scrolling-nav.js";
 import LayoutPlugin from "bootstrap-vue";
 import NavbarPlugin from "bootstrap-vue";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -13,8 +14,8 @@ import BackToTop from "vue-backtotop";
 // import "@/scrollspy/scrollspy.min.js";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
-import ScrollFixedHeader from "vuejs-scroll-fixed-header";
-// import "@/assets/scrolling-nav.js";
+import ScrollFixedHeader from "vuejs-scroll-fixed-header"; 
+import { VBScrollspyPlugin } from "bootstrap-vue";
 
 Vue.config.productionTip = false;
 var VueScrollTo = require("vue-scrollto");
@@ -24,6 +25,7 @@ Vue.use(NavbarPlugin);
 Vue.use(BackToTop);
 Vue.use(VueAwesomeSwiper);
 Vue.use(ScrollFixedHeader);
+Vue.use(VBScrollspyPlugin);
 
 new Vue({
   created() {

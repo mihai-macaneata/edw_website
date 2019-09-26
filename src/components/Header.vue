@@ -42,8 +42,12 @@
   <!-- Main Div Content End -->
 </template>
 
+<script src="@/src/assets/scrolling-nav.js"></script>
+
 <script>
 export default {
+  // import "@/assets/scrolling-nav.js";
+
   data() {
     return {};
   },
