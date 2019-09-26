@@ -34,12 +34,12 @@ body {
   padding-top: 20px;
   padding-bottom: 8px;
 
-  .navbar-collapse{
+  .navbar-collapse {
     margin-bottom: 5px;
   }
 
   .edw_logo {
-margin-left: 10px !important;
+    margin-left: 10px !important;
   }
   .nav-item {
     margin-right: 20px !important;
@@ -820,19 +820,49 @@ margin-left: 10px !important;
 /* Media Queries */
 /* Mobile Styles */
 @media only screen and (max-width: 576px) {
+
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
   .navbar-collapse {
     padding-top: 20px;
-    margin-bottom: 40px !important;
+    padding-bottom: 40px !important;
   }
   .bg-dark {
     background: #1e1e1e !important;
   }
-  .nav-item{
-    padding-top:5px !important;
+  .nav-item {
+    padding-top: 5px !important;
   }
 
   .globe_img {
     height: 30px;
+  }
+
+  // header txt
+  .header_content {
+    .header_text {
+      .header_title {
+        font-size: 55px;
+      }
+      .header_description {
+        font-size: 13px;
+        padding-top: 8px;
+        margin-right: 10px;
+      }
+    }
+    //header btn
+    .btn_center {
+      .header_btn {
+        padding: 20px 25px;
+        .btn_text {
+          font-size: 16px !important;
+        }
+        .arrow_right {
+          margin-top: 0px !important;
+        }
+      }
+    }
   }
 
   /* Body component */
@@ -1079,23 +1109,53 @@ margin-left: 10px !important;
 
 /* Tablet Styles */
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+
   .navbar-collapse {
     padding-top: 20px;
-    margin-bottom: 40px !important;
+    padding-bottom: 40px !important;
   }
   .bg-dark {
     background: #1e1e1e !important;
   }
-  .nav-item{
-    padding-top:5px !important;
+  .nav-item {
+    padding-top: 5px !important;
   }
 
   .globe_img {
     height: 30px;
   }
 
-/*Body Component*/
-//About Us
+  // header txt
+  .header_content {
+    .header_text {
+      .header_title {
+        font-size: 75px;
+      }
+      .header_description {
+        font-size: 14px;
+        padding-top: 5px;
+      }
+    }
+    //header btn
+    .btn_center {
+      .header_btn {
+        padding: 20px 25px;
+        .btn_text {
+          font-size: 16px !important;
+        }
+        .arrow_right {
+          margin-top: 0px !important;
+        }
+      }
+    }
+  }
+
+  /*Body Component*/
+  //About Us
   .about_us {
     .aboutus_container {
       padding-top: 80px;
@@ -1310,21 +1370,21 @@ margin-left: 10px !important;
 /*Larger devices than Tablet */
 /* Medium and Large */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-
   .navbar-collapse {
     padding-top: 20px;
-    margin-bottom: 40px !important;
+    padding-bottom: 40px !important;
   }
   .bg-dark {
     background: #1e1e1e !important;
   }
-  .nav-item{
-    padding-top:5px !important;
+  .nav-item {
+    padding-top: 5px !important;
   }
 
   .globe_img {
     height: 30px;
   }
+
   /*Body Component*/
   .tech_used {
     .techused_logo {
