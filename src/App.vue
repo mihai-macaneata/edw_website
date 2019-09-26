@@ -92,7 +92,7 @@
       :header_text="data.header_text"
       :header_btn="data.header_btn"
     />
-    <Body data-spy="scroll" data-target=".navElem" data-offset="50"
+    <Body
       :aboutus_title="data.aboutus_title"
       :aboutus_txt="data.aboutus_txt"
       :aboutus_btn="data.aboutus_btn"
