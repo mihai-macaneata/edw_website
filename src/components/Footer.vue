@@ -37,17 +37,6 @@
       </b-container>
     </div>
     <!-- Social media End-->
-    <b-container>
-      <b-row>
-        <b-col>
-          <back-to-top class="btn-up">
-            <button type="button" class="btn btn-to-top">
-              <i class="fa fa-chevron-up"></i>
-            </button>
-          </back-to-top>
-        </b-col>
-      </b-row>
-    </b-container>
 
     <!-- Photos Row-->
     <div class="photos_row">
@@ -81,6 +70,18 @@
       </div>
     </div>
     <!-- Photos Row End-->
+
+    <b-container>
+      <b-row>
+        <b-col>
+          <back-to-top class="btn-up">
+            <button type="button" class="btn btn-to-top">
+              <i class="fa fa-chevron-up"></i>
+            </button>
+          </back-to-top>
+        </b-col>
+      </b-row>
+    </b-container>
 
     <!-- Footer black -->
     <div class="footer_black">
