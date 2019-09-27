@@ -1,4 +1,4 @@
 // vue.config.js
 module.exports = {
-publicPath: `<edw_website>`
+publicPath: `edw_website`
 }
