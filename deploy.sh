@@ -1,3 +1,4 @@
+npm install
 npm run build
 find . ! -name '.git/' ! -name 'dist/' ! -name '.gitignore' ! -name 'node_modules/' -delete
 mv dist/* .
