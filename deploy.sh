@@ -1,7 +1,9 @@
 npm install
 npm run build
-find . ! -name '.git/' ! -name 'dist/' ! -name '.gitignore' ! -name 'node_modules/' -delete
+rm -r src public
+rm .browserslistrc .eslintrc.js .babel.config.js .deploy.sh package-lock.json package.json postcss.config.js readme.md vue.config.js
 mv dist/* .
+rm -r dist
 git add .
 git commit -m "redeploy"
 git push --force origin master:gh-pages
