@@ -45,54 +45,50 @@
     </div> -->
     <!-- Header Navigation End -->
 
-    <b-navbar
-      toggleable="lg"
-      type="dark"
-      variant="dark"
-      sticky
-    >
-      <b-navbar-brand href="#">
-        <img
-          class="edw_logo"
-          src="@/assets/img/edw_logo.svg"
-          alt="Eau de Web SRL Logo"
-      /></b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <!-- Right aligned nav items -->
-        <b-navbar-nav
-          class="navElem ml-auto" v-b-scrollspy:nav-scroller
-          v-for="label in data.menu_labels"
-          :key="label.aboutUs"
+    <!-- <b-navbar
+          toggleable="lg"
+          type="dark"
+          variant="dark"
+          sticky
         >
-          <b-nav-item v-scroll-to="'#about_us'" href="#about_us">{{
-            label.aboutUs
-          }}</b-nav-item>
-          <b-nav-item v-scroll-to="'#client_work'" href="#client_work">{{
-            label.clientWork
-          }}</b-nav-item>
-          <b-nav-item v-scroll-to="'#tech_used'" href="#tech">{{
-            label.tech
-          }}</b-nav-item>
-          <b-nav-item v-scroll-to="'#jobs'" href="#jobs">{{
-            label.jobs
-          }}</b-nav-item>
-          <b-nav-item v-scroll-to="'#contact_us'" href="#contact_us">{{
-            label.contact
-          }}</b-nav-item>
-          <b-nav-item class="globe_img"></b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+          <b-navbar-brand href="#">
+            <img
+              class="edw_logo"
+              src="@/assets/img/edw_logo.svg"
+              alt="Eau de Web SRL Logo"
+          /></b-navbar-brand>
 
-    <Header
-      :menu_labels="data.menu_labels"
-      :header_text="data.header_text"
-      :header_btn="data.header_btn"
-    />
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav
+              class="navElem ml-auto" v-b-scrollspy:nav-scroller
+              v-for="label in data.menu_labels"
+              :key="label.aboutUs"
+            >
+              <b-nav-item v-scroll-to="'#about_us'" href="#about_us">{{
+                label.aboutUs
+              }}</b-nav-item>
+              <b-nav-item v-scroll-to="'#client_work'" href="#client_work">{{
+                label.clientWork
+              }}</b-nav-item>
+              <b-nav-item v-scroll-to="'#tech_used'" href="#tech">{{
+                label.tech
+              }}</b-nav-item>
+              <b-nav-item v-scroll-to="'#jobs'" href="#jobs">{{
+                label.jobs
+              }}</b-nav-item>
+              <b-nav-item v-scroll-to="'#contact_us'" href="#contact_us">{{
+                label.contact
+              }}</b-nav-item>
+              <b-nav-item class="globe_img"></b-nav-item>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-navbar> -->
+
+    <Header :header_text="data.header_text" :header_btn="data.header_btn" />
     <Body
+      :menu_labels="data.menu_labels"
       :aboutus_title="data.aboutus_title"
       :aboutus_txt="data.aboutus_txt"
       :aboutus_btn="data.aboutus_btn"

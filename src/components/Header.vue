@@ -1,7 +1,9 @@
 <template>
   <!-- Main Div Content -->
   <div>
+
     <div class="header_image">
+      
       <!-- Header Content -->
       <div class="header_content">
         <!-- Header Text -->
