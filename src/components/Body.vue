@@ -123,23 +123,31 @@
 
           <!-- About Us Btns -->
           <b-row>
-            <b-col class="aboutusbtn_style">
-              <div
-                v-for="text in aboutus_btn"
-                :key="text.contactus_btn"
-                class="aboutus_btn"
-                data-aos="fade-up"
-              >
-                <p
-                  v-html="text.contactus_btn"
-                  class="contactus_btn"
-                  v-scroll-to="'#contact_us'"
-                ></p>
-                <p
-                  v-html="text.jobs_btn"
-                  class="jobs_btn"
-                  v-scroll-to="'#jobs'"
-                ></p>
+            <b-col>
+              <div>
+                <b-container class="aboutusbtn_style">
+                  <b-row
+                    v-for="text in aboutus_btn"
+                    :key="text.contactus_btn"
+                    class="aboutus_btn"
+                    data-aos="fade-up"
+                  >
+                    <b-col lg="3">
+                      <p
+                        v-html="text.contactus_btn"
+                        class="contactus_btn"
+                        v-scroll-to="'#contact_us'"
+                      ></p>
+                    </b-col>
+                    <b-col lg="3">
+                      <p
+                        v-html="text.jobs_btn"
+                        class="jobs_btn"
+                        v-scroll-to="'#jobs'"
+                      ></p>
+                    </b-col>
+                  </b-row>
+                </b-container>
               </div>
             </b-col>
           </b-row>
