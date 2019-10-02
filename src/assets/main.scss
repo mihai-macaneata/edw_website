@@ -9,10 +9,10 @@ body {
 
 //highlighted text in green
 ::selection {
-  background: #b9e475; /* WebKit/Blink Browsers */
+  background: #a0d7b4; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #b9e475; /* Gecko Browsers */
+  background: #a0d7b4; /* Gecko Browsers */
 }
 
 /* Header Component */
@@ -37,17 +37,18 @@ body {
   .edw_logo {
     margin-left: 25px !important;
     margin-top: -10px;
+    // width: 30%;
   }
 
   .nav-item {
     margin-right: 20px !important;
     padding-top: 10px;
     .active {
-      color: #d5fa3b !important;
+      color: #f9d70c !important;
     }
 
     &:nth-last-child(2) {
-      background-color: #d5fa3b;
+      background-color: #f9d70c;
       color: #1e1e1e !important;
       padding: 5px 8px;
       margin-top: 5px;
@@ -70,7 +71,7 @@ body {
     color: #fff !important;
     &:hover,
     &:focus {
-      color: #d5fa3b !important;
+      color: #f9d70c !important;
     }
   }
 }
@@ -78,7 +79,7 @@ body {
 //contact us - color bg when active
 .nav-item.active {
   &:nth-last-child(2) {
-    background: #b9e30c !important;
+    background: #dec116 !important;
   }
 }
 
@@ -139,13 +140,13 @@ body {
     position: absolute;
     .header_btn {
       display: inline-flex;
-      background-color: #7db621;
+      background-color: #1a9f49;
       border: none;
       padding: 20px 35px;
       border-radius: 35px;
       cursor: pointer;
       &:hover {
-        background-color: #6fa715;
+        background-color: #118f3e;
       }
       .btn_text {
         font-size: 18px;
@@ -188,7 +189,7 @@ body {
 }
 
 .content_lineUnder {
-  border-color: #d5fa3b;
+  border-color: #f9d70c;
   border-width: 2px;
   width: 80px;
   margin-left: auto;
@@ -196,11 +197,11 @@ body {
 }
 
 .edw_links {
-  color: #d5fa3b;
-  border-bottom: 1px solid #d5fa3b;
+  color: #f9d70c;
+  border-bottom: 1px solid #f9d70c;
   text-decoration: none;
   &:hover {
-    color: #b9e30c;
+    color: #dec116;
     text-decoration: none;
   }
 }
@@ -232,7 +233,7 @@ body {
         font-size: 20px;
         .title_edw {
           display: inline;
-          color: #7db621;
+          color: #1a9f49;
         }
       }
       //Name logo,title and description
@@ -241,7 +242,7 @@ body {
       }
       .nameCard_title,
       .manifestoCard_title {
-        color: #7db621;
+        color: #1a9f49;
         font-weight: 700;
         font-size: 18px;
         text-transform: uppercase;
@@ -278,27 +279,27 @@ body {
         text-transform: uppercase;
         font-weight: 400;
         color: #fff;
-        background-color: #7db621;
+        background-color: #1a9f49;
         padding: 15px 40px;
         border-radius: 35px;
         text-align: center;
         &:hover {
-          background-color: #6fa715;
+          background-color: #118f3e;
         }
       }
       .jobs_btn {
         font-size: 18px;
         text-transform: uppercase;
-        color: #7db621;
-        border: 1px solid #7db621;
+        color: #1a9f49;
+        border: 1px solid #1a9f49;
         border-radius: 35px;
         padding: 15px 30px;
         background-color: transparent;
         text-align: center;
         &:hover {
-          background-color: #7db621;
+          background-color: #1a9f49;
           color: #fff;
-          border: 1px solid #7db621;
+          border: 1px solid #1a9f49;
         }
       }
     }
@@ -387,21 +388,21 @@ body {
     display: flex;
     justify-content: center; //horizontal align
     align-items: center; //vertical align
-    padding-top: 25px;
+    padding-top: 30px;
     cursor: pointer;
     .workone_btn {
       font-size: 18px;
       text-transform: uppercase;
-      color: #7db621;
+      color: #f9d60b;
       border: 1px solid;
       border-radius: 35px;
       padding: 15px 35px;
       background-color: transparent;
       text-decoration: none;
       &:hover {
-        background-color: #7db621;
-        color: #fff;
-        border: 1px solid #7db621;
+        background-color: #f9d60b;
+        color: #1e1e1e;
+        border: 1px solid #f9d60b;
       }
     }
   }
@@ -512,7 +513,7 @@ body {
 
 //Jobs
 .jobs {
-  background-color: #7db621;
+  background-color: #1a9f49;
   padding: 150px 0 150px 0;
   .jobs_col {
     .jobs_title {
@@ -538,7 +539,7 @@ body {
         position: relative;
         height: 80px;
         .jobs_title {
-          color: #7db621;
+          color: #1a9f49;
           font-weight: 700;
           font-size: 20px;
           text-align: center;
@@ -563,16 +564,16 @@ body {
         .jobs_btn {
           font-size: 18px;
           text-transform: uppercase;
-          color: #7db621;
+          color: #1a9f49;
           border: 1px solid;
           border-radius: 35px;
           padding: 15px 35px;
           background-color: transparent;
           text-decoration: none;
           &:hover {
-            background-color: #7db621;
+            background-color: #1a9f49;
             color: #fff;
-            border: 1px solid #7db621;
+            border: 1px solid #1a9f49;
           }
         }
       }
@@ -695,8 +696,8 @@ body {
     border-radius: 35px;
     font-size: 22px;
     line-height: 22px;
-    background-color: #7db621;
-    border-color: #7db621;
+    background-color: #1a9f49;
+    border-color: #1a9f49;
     color: #fff;
     position: absolute;
     margin-left: -50px;
@@ -704,8 +705,8 @@ body {
     box-shadow: 5px 10px 15px rgba(30, 30, 30, 0.1);
     &:hover {
       color: #fff;
-      background-color: #6fa715;
-      border-color: #6fa715;
+      background-color: #118f3e;
+      border-color: #118f3e;
     }
   }
 }
@@ -714,6 +715,10 @@ body {
 .footer_black {
   background-color: #1e1e1e;
   padding: 25px 0 25px 0;
+
+  .edw_logofooter {
+    margin-left: -15px;
+  }
 
   .footerright_row {
     margin-left: -30px;
@@ -728,7 +733,7 @@ body {
       margin: 8px 0 0 0;
     }
     .footer_linksone {
-      margin-top: 20px;
+      margin-top: 28px;
       margin-left: -24px;
       text-align: left;
       a {
@@ -771,7 +776,7 @@ body {
   }
   .edw_links {
     &:hover {
-      color: #d5fa3b;
+      color: #f9d70c;
     }
   }
   .navbar-collapse {
@@ -805,7 +810,7 @@ body {
         a.nav-link {
           color: #fff !important;
           &.active {
-            color: #d5fa3b !important;
+            color: #f9d70c !important;
           }
           &:hover,
           &:focus {
@@ -852,7 +857,7 @@ body {
         padding: 20px 25px;
 
         &:hover {
-          background-color: #7db621;
+          background-color: #1a9f49;
         }
         .btn_text {
           font-size: 16px !important;
@@ -918,7 +923,7 @@ body {
           padding: 15px 35px;
           &:hover {
             color: #fff;
-            background-color: #7db621;
+            background-color: #1a9f49;
             border: none;
           }
         }
@@ -926,8 +931,8 @@ body {
           font-size: 16px;
           padding: 15px 52px;
           &:hover {
-            color: #7db621;
-            border: 1px solid #7db621;
+            color: #1a9f49;
+            border: 1px solid #1a9f49;
             background-color: transparent;
           }
         }
@@ -964,8 +969,8 @@ body {
         font-size: 16px;
         &:hover {
           background-color: transparent;
-          color: #7db621;
-          border: 1px solid #7db621;
+          color: #1a9f49;
+          border: 1px solid #1a9f49;
         }
       }
     }
@@ -1050,8 +1055,8 @@ body {
             font-size: 16px;
             &:hover {
               background-color: transparent;
-              color: #7db621;
-              border: 1px solid #7db621;
+              color: #1a9f49;
+              border: 1px solid #1a9f49;
             }
           }
         }
@@ -1146,7 +1151,7 @@ body {
 
   .edw_links {
     &:hover {
-      color: #d5fa3b;
+      color: #f9d70c;
     }
   }
   .bg-dark {
@@ -1173,7 +1178,7 @@ body {
         a.nav-link {
           color: #fff !important;
           &.active {
-            color: #d5fa3b !important;
+            color: #f9d70c !important;
           }
           &:hover,
           &:focus {
@@ -1218,7 +1223,7 @@ body {
       .header_btn {
         padding: 20px 25px;
         &:hover{
-          background-color: #7db621;
+          background-color: #1a9f49;
         }
         .btn_text {
           font-size: 16px !important;
@@ -1279,7 +1284,7 @@ body {
           padding: 15px 35px;
           &:hover {
             color: #fff;
-            background-color: #7db621;
+            background-color: #1a9f49;
             border: none;
           }
         }
@@ -1287,8 +1292,8 @@ body {
           font-size: 16px;
           padding: 15px 35px;
           &:hover {
-            color: #7db621;
-            border: 1px solid #7db621;
+            color: #1a9f49;
+            border: 1px solid #1a9f49;
             background-color: transparent;
           }
         }
@@ -1311,8 +1316,8 @@ body {
           font-size: 16px;
           &:hover {
             background-color: transparent !important;
-            color: #7db621;
-            border: 1px solid #7db621;
+            color: #1a9f49;
+            border: 1px solid #1a9f49;
           }
         }
       }
@@ -1391,8 +1396,8 @@ body {
           .jobs_btn {
             &:hover {
               background-color: transparent;
-              color: #7db621;
-              border: 1px solid #7db621;
+              color: #1a9f49;
+              border: 1px solid #1a9f49;
             }
           }
         }
@@ -1504,11 +1509,11 @@ body {
         a.nav-link {
           color: #fff !important;
           &.active {
-            color: #d5fa3b !important;
+            color: #f9d70c !important;
           }
           &:hover,
           &:focus {
-            color: #d5fa3b !important;
+            color: #f9d70c !important;
           }
         }
       }
@@ -1517,7 +1522,7 @@ body {
       font-size: 18px;
       &:hover,
       &:focus {
-        color: #d5fa3b !important;
+        color: #f9d70c !important;
       }
     }
   }

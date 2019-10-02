@@ -93,7 +93,7 @@
                 <b-col cols="4" lg="2">
                   <a href="#"
                     ><img
-                      class="edw_logo"
+                      class="edw_logofooter"
                       src="@/assets/img/edw_logo.svg"
                       alt="Eau de Web SRL Logo"
                   /></a>
